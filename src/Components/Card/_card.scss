@@ -1,0 +1,35 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #11172a;
+  height: 51vh;
+  color: #fff;
+  border-radius: 1rem;
+  width: 84%;
+  &__left {
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-top: 6rem;
+    &--title {
+      font-size: 2.2rem;
+    }
+    &--parag {
+      line-height: 1.6;
+      font-size: 1.8rem;
+      font-weight: 200;
+      margin-top: 1.4rem;
+    }
+    &--author {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 1.4rem;
+    }
+  }
+  &__right {
+    img {
+      height: 35rem;
+      margin-left: 25rem;
+      margin-top: -3rem;
+    }
+  }
+}
