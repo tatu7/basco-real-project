@@ -1,8 +1,9 @@
 .about {
-  height: 100vh;
+  height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 8rem;
   &__title {
     display: block;
     text-align: center;
@@ -19,11 +20,20 @@
     font-size: 1.6rem;
     line-height: 1.8;
   }
-  &__more--button {
-    display: block;
-    text-align: left;
-    margin: 0 auto;
-    margin-top: 3rem;
+  &--button {
+    margin: 4rem auto;
+    button {
+      border: none;
+      text-align: center;
+      background-color: #a66dff;
+      color: #fff;
+      width: 20rem;
+      height: 5rem;
+      border-radius: 0.5rem;
+      font-weight: 800;
+      cursor: pointer;
+      outline: none;
+    }
   }
 }
 .img {

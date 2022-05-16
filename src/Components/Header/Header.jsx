@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../Assets/images/logo.png";
 import mainImg from "../../Assets/images/mainImg.png";
 import headIMg1 from "../../Assets/images/headImg-1.png";
@@ -17,7 +17,9 @@ import human from "../../Assets/images/human-resources.png";
 import savdo from "../../Assets/images/money.png";
 import "./_header.scss";
 import "../main.scss";
+import Modal from "../../UI/Modal/Modal";
 function Header() {
+  const [shower, setShower] = useState(false);
   return (
     <section className="header">
       <div className="container">
@@ -42,7 +44,11 @@ function Header() {
               xarajatlaringiz kamayadi.
             </p>
             <div className="header__main--left--buttons">
-              <a className="header__main--left--buttons--1" href="#aa">
+              <a
+                onClick={() => setShower(true)}
+                className="header__main--left--buttons--1"
+                href="#aa"
+              >
                 Demo videoni ko`rish
               </a>
               <a href="#dd" className="header__main--left--buttons--2">
@@ -96,6 +102,7 @@ function Header() {
           </div>
         </div>
       </div>
+      {shower ? <Modal shower={shower} setShower={setShower} /> : ""}
     </section>
   );
 }

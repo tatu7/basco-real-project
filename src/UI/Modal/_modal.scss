@@ -1,0 +1,42 @@
+.modal {
+  z-index: 5000;
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #3333;
+  border-radius: 0.4rem;
+  padding: 1rem;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  &__head {
+    right: 20rem;
+    height: 10%;
+
+    i {
+      position: absolute;
+      font-size: 3.4rem;
+      color: #333;
+      right: 2rem;
+      cursor: pointer;
+    }
+    &--draw {
+      width: 100%;
+      background-color: black;
+      height: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__body {
+    width: 100%;
+    height: auto;
+    iframe {
+      width: 100%;
+      height: 55rem;
+    }
+  }
+}

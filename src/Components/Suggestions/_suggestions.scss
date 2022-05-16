@@ -1,9 +1,8 @@
 .suggestions {
   display: grid;
-  width: 84%;
   margin: 0 auto;
   grid-template-columns: repeat(1, 1fr);
-  margin-bottom: 200px;
+  margin-bottom: 20em;
   &-top {
     width: 100%;
     margin: 0 auto;
@@ -37,7 +36,6 @@
     margin-top: 5rem;
     width: 100%;
     &__list {
-      width: 75%;
       display: flex;
       flex-wrap: wrap;
       padding: 0;
@@ -47,10 +45,13 @@
     }
     &__item {
       margin-bottom: 5rem;
-      width: 25%;
+      width: 30%;
       margin-right: 3rem;
     }
     &-card {
+      &__box {
+        width: 25%;
+      }
       &__img {
         border-radius: 2rem;
       }
