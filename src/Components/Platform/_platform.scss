@@ -1,0 +1,129 @@
+.platform {
+  padding: 5rem;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  &__left {
+    position: relative;
+    &--title {
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: 0.1rem;
+      margin-bottom: 4rem;
+    }
+    &--parag {
+      &--1,
+      &--2,
+      &--3,
+      &--4 {
+        margin: 2rem 0;
+        font-size: 1.9rem;
+        line-height: 1.4;
+      }
+    }
+    &--more--button {
+      button {
+        border: none;
+        text-align: center;
+        background-color: #ffdea3;
+        color: #fff;
+        width: 20rem;
+        height: 5rem;
+        border-radius: 0.5rem;
+        font-weight: 800;
+        cursor: pointer;
+      }
+    }
+    &--img--1 {
+      position: absolute;
+      height: 3rem;
+      transform: rotate(15deg);
+      right: -10%;
+      bottom: 10%;
+    }
+    &--img--2 {
+      position: absolute;
+      height: 3rem;
+      left: -10%;
+      top: 30%;
+      transform: rotate(15deg);
+    }
+  }
+  &__right {
+    position: relative;
+    &--img--1 {
+      position: absolute;
+      height: 45%;
+      top: 1%;
+      left: 10%;
+    }
+    &--img--2 {
+      position: absolute;
+      height: 45%;
+      bottom: 11%;
+      right: 1%;
+      width: 65%;
+    }
+    &--img--3 {
+      position: absolute;
+      height: 30rem;
+      bottom: 30%;
+      right: 1%;
+      width: 60%;
+    }
+    &--img--4 {
+      position: absolute;
+      height: 3rem;
+      right: 10%;
+      transform: rotate(20deg);
+    }
+    &--img--5 {
+      position: absolute;
+      height: 4rem;
+      bottom: 1%;
+      right: 20%;
+      transform: rotate(20deg);
+    }
+    &--img--6 {
+      z-index: 200;
+      position: absolute;
+      height: 14rem;
+      bottom: 46%;
+      right: 2%;
+    }
+    &--img--7 {
+      position: absolute;
+      height: 4rem;
+      top: 40%;
+      left: 14%;
+    }
+    &--button {
+      position: absolute;
+      text-align: center;
+      display: flex;
+      background-color: #fff;
+      height: 4rem;
+      width: 18rem;
+      border-radius: 1.1rem;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      bottom: 7%;
+      left: 38%;
+      cursor: pointer;
+      img {
+        height: 90%;
+        padding-left: 1rem;
+        padding-top: 0.2rem;
+      }
+      p {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 900;
+        padding-top: 1.1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}

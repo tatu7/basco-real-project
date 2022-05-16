@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./about.scss";
 import ".././main.scss";
-import Button from "../../UI/Button/Button";
 import plus from "../../Assets/images/plus (1).png";
 import aylana from "../../Assets/images/aboutImg-1.png";
 import refresh from "../../Assets/images/headImg-1.png";
 import star from "../../Assets/images/star (1).png";
+import { Fade } from "react-reveal";
 function About() {
+  const [shower, setShower] = useState(false);
   return (
     <section className="about">
       <h2 className="about__title">Hurmatli biznes egasi...</h2>
@@ -22,9 +23,33 @@ function About() {
         oshiradigan va xarajatlaringizni bir necha baravarga qisqartiradigan
         yagona yechim kerak.
       </div>
-      <div className="about__more--button">
-        <Button>Davomini o’qish</Button>
+      {shower ? (
+        <Fade top>
+          <div className="about__parag">
+            Agar bunday texnologiya biznesingizda mavjud bo’lmasa, siz bor
+            vaqtingizni biznesingizning rivojlanishiga hech qanday hissa
+            qo’shmaydigan murakkab va mayda ishlar bilan band bo’lib qolasiz.
+            Xodimlaringizning samaradorligi tushib, mijozlaringizning
+            talablarini bajara olmaysiz. Natijada, ular sizni emas,
+            raqobatchilaringizni tanlab ketishadi. Bozordagi ulushingiz keskin
+            kamayib, biznesingiz qutqarib bo’lmas jar yoqasiga kelib qoladi.
+            Lekin, biz hozir bu xabarlar bilan sizning kayfiyatingizni
+            tushirmoqchi emasmiz. Biz sizning shunday muammolaringizga yechim
+            bermoqchimiz. Agar biznesingizning bugungi va ertangi holatiga
+            befarq bo’lmasangiz… Har bir so’zimizni diqqat bilan o’qishni
+            maslahat beramiz. Ishonamizki, sarflagan vaqtingiz siz uchun eng
+            manfaatlisi bo’ladi.
+          </div>
+        </Fade>
+      ) : (
+        ""
+      )}
+      <div className="about--button">
+        <button onClick={() => setShower(!shower)}>
+          {shower ? "Yopish" : "Davomini o`qish "}
+        </button>
       </div>
+
       <div className="about__images">
         <img className="img--1" src={plus} alt="" />
         <img className="img--2" src={aylana} alt="" />

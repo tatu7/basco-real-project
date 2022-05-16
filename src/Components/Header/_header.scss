@@ -197,9 +197,9 @@
     text-align: center;
     padding-top: 2rem;
     bottom: -8%;
-    width: 24rem;
+    width: 22rem;
     right: 1%;
-    bottom: -5%;
+    bottom: -3%;
     z-index: 20;
     &--2 {
       display: flex;
@@ -232,14 +232,14 @@
     position: absolute;
     background-color: #181e30;
     border-radius: 0.6rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, #0000000f 0px 0px 0px 1px;
+    box-shadow: 0 -8px 10px -5px #333;
     padding: 0 1.2rem;
-    z-index: 3;
+    z-index: -10;
     height: 4rem;
     text-align: center;
     padding-top: 1rem;
     width: 18rem;
-    bottom: -20%;
+    bottom: -9%;
     right: 20%;
     &--2 {
       display: flex;

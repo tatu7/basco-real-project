@@ -1,0 +1,70 @@
+.statistica {
+  height: 100vh;
+  background-color: #11172a;
+  color: #fff;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__left {
+    position: relative;
+    &--img--1 {
+      position: absolute;
+      width: 55%;
+      height: 60%;
+      top: 30%;
+    }
+    &--img--2 {
+      position: absolute;
+      width: 60%;
+      height: 50%;
+      top: 60%;
+      left: 25%;
+    }
+    &--img--3 {
+      position: absolute;
+      width: 50%;
+      height: 80%;
+      top: 20%;
+      color: #fff;
+      left: 25%;
+    }
+  }
+  &__right {
+    &--title {
+      font-size: 2.2rem;
+      margin-top: 5rem;
+    }
+    &--parag {
+      margin-top: 3rem;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    &--item {
+      display: flex;
+      margin-top: 4rem;
+      &--left {
+        background-color: #232c49;
+        width: 1.5rem;
+        display: flex;
+        height: 1.5rem;
+        border-radius: 50%;
+        color: #fff;
+        padding: 2.2rem;
+        align-items: center;
+        justify-content: center;
+        margin-right: 4rem;
+      }
+      &--right {
+        b {
+          display: block;
+          font-size: 1.4rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
