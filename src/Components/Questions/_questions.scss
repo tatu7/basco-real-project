@@ -1,0 +1,59 @@
+.questions {
+  display: grid;
+  width: 59%;
+  grid-template-columns: repeat(1, 1fr);
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 200px;
+  &__subject {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: #191919;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  &__wrapper {
+  }
+}
+.question {
+  margin-top: 50px;
+  background: rgba(0, 0, 0, 0.0001);
+  padding-bottom: 30px;
+  border-bottom: 1px solid #3a3a3a;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__subject {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: start;
+    letter-spacing: -1px;
+    color: #191919;
+  }
+  &__btn {
+    border: transparent;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+  }
+  &__text {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: start;
+    color: #5d5d5d;
+    width: 75rem;
+  }
+}
