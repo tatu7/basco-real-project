@@ -12,9 +12,9 @@ import headIMg8 from "../../Assets/images/headImg-8.png";
 import headIMg9 from "../../Assets/images/headImg-9.png";
 import headIMg11 from "../../Assets/images/headImg-11.png";
 import headIMg12 from "../../Assets/images/headImg-12.png";
-import star from "../../Assets/images/star.png";
-import human from "../../Assets/images/human-resources.png";
-import savdo from "../../Assets/images/money.png";
+import star from "../../Assets/images/icon-8.png";
+import human from "../../Assets/images/icon-3.png";
+import savdo from "../../Assets/images/icon-5.png";
 import "./_header.scss";
 import "../main.scss";
 import Modal from "../../UI/Modal/Modal";
@@ -34,6 +34,7 @@ function Header() {
             <p className="header__main--left--parag--1">
               Diqqatingizni
               <b>
+                {" "}
                 biznesingizdagi <br /> eng muhim ishlarga qarating. <br />
               </b>
               Qolgan ishlarni avtomatlashtiring

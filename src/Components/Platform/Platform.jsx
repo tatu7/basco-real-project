@@ -10,8 +10,10 @@ import plus from "../../Assets/images/plus (1).png";
 import sariq from "../../Assets/images/adviceImg-3.png";
 import halqa from "../../Assets/images/adviceImg-1.png";
 import { Fade } from "react-reveal";
+import Modal from "../../UI/Modal/Modal";
 function Platform() {
   const [shower, setShower] = useState(false);
+  const [showerModal, setShowerModal] = useState(false);
   return (
     <section className="platform container">
       <div className="platform__left">
@@ -32,11 +34,15 @@ function Platform() {
           Basco ERP platformasi kompaniyangizdagi muhim fundamental jarayonlarni
           samarali boshqarish va avtomatlashtirish imkoniyatini beradi.
         </p>
-        <div className="platform__left--more--button">
-          <button onClick={() => setShower(!shower)}>
-            {shower ? "Yopish" : "Davomini o`qish "}
-          </button>
-        </div>
+        {shower ? (
+          ""
+        ) : (
+          <div className="platform__left--more--button">
+            <button onClick={() => setShower(!shower)}>
+              {shower ? "Yopish" : "Davomini o`qish "}
+            </button>
+          </div>
+        )}
         <img className="platform__left--img--1" src={star} alt="" />
         <img className="platform__left--img--2" src={plus} alt="" />
       </div>
@@ -49,7 +55,8 @@ function Platform() {
         <img className="platform__right--img--6" src={halqa} alt="" />
         <img className="platform__right--img--7" src={sariq} alt="" />
         <div className="platform__right--button">
-          <p> Videoni ko’rish</p> <img src={play} alt="" />
+          <p onClick={() => setShowerModal(!showerModal)}> Videoni ko’rish</p>
+          <img src={play} alt="" />
         </div>
       </div>
       {shower ? (
@@ -101,9 +108,25 @@ function Platform() {
               <p className="platform__left--parag--4">
                 “Mutaxassis bilan bog’lanish”
               </p>
+              {shower ? (
+                <div className="platform__left--more--button">
+                  <button onClick={() => setShower(!shower)}>
+                    {shower ? "Yopish" : "Davomini o`qish "}
+                  </button>
+                </div>
+              ) : (
+                ""
+              )}
             </p>
           </div>
         </Fade>
+      ) : (
+        ""
+      )}
+      {showerModal ? (
+        <div className="platform__modal">
+          <Modal shower={showerModal} setShower={setShowerModal} />
+        </div>
       ) : (
         ""
       )}

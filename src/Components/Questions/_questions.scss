@@ -6,9 +6,10 @@
   justify-content: center;
   margin: 0 auto;
   align-items: center;
-  margin-bottom: 200px;
+  height: auto;
+  padding: 5rem 0;
+  margin-bottom: 5rem;
   &__subject {
-    font-family: "Poppins";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -16,8 +17,6 @@
     color: #191919;
     margin: 0 auto;
     margin-bottom: 30px;
-  }
-  &__wrapper {
   }
 }
 .question {
@@ -31,7 +30,6 @@
     align-items: flex-end;
   }
   &__subject {
-    font-family: "Gilroy";
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -47,7 +45,6 @@
     background-color: transparent;
   }
   &__text {
-    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: 22px;

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-
 import "./_advice.scss";
 import "../main.scss";
 import star from "../../Assets/images/star (1).png";
 import plus from "../../Assets/images/plus (1).png";
 import aylana from "../../Assets/images/aboutImg-1.png";
-// import bulut from "../../Assets/images/headImg-4.png";
 import halqa from "../../Assets/images/adviceImg-1.png";
 import uchburchak from "../../Assets/images/adviceImg-2.png";
 import sariq from "../../Assets/images/adviceImg-3.png";
@@ -36,11 +34,15 @@ function Advice() {
           Bu esa doimiy ravishda sizning energiyangiz va vaqtingizni havoga
           sovurib, hech qanday ijobiy o’zgarish olib kelmaydi.
         </p>
-        <div className="advice__left--button">
-          <button onClick={() => setShower(!shower)}>
-            {shower ? "Yopish" : "Davomini o`qish "}
-          </button>
-        </div>
+        {shower ? (
+          ""
+        ) : (
+          <div className="advice__left--button">
+            <button onClick={() => setShower(!shower)}>
+              {shower ? "Yopish" : "Davomini o`qish "}
+            </button>
+          </div>
+        )}
         <img className="advice__left--img--1" src={star} alt="" />
         <img className="advice__left--img--2" src={plus} alt="" />
       </div>
@@ -96,6 +98,15 @@ function Advice() {
               imkoniyatlarni ochishingiz mumkin bo’ladi. “Imkoniyat bilan
               tanishish”
             </p>
+            {shower ? (
+              <div className="advice__left--button">
+                <button onClick={() => setShower(!shower)}>
+                  {shower ? "Yopish" : "Davomini o`qish "}
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </Fade>
       ) : (

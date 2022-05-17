@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ".././main.scss";
 import "./_directions.scss";
-import trade from "../../Assets/images/trade.png";
-import button from "../../Assets/images/button.png";
+import trade from "../../Assets/images/icon-2.png";
+import resource from "../../Assets/images/icon-3.png";
+import house from "../../Assets/images/icon-6.png";
+import star from "../../Assets/images/icon-8.png";
+import setting from "../../Assets/images/icon-7.png";
+import saveMoney from "../../Assets/images/icon-4.png";
+import kluch from "../../Assets/images/icon-1.png";
+import money from "../../Assets/images/icon-5.png";
+
 import { AiOutlineRight } from "react-icons/ai";
 function Directions() {
+  const [shower, setShower] = useState(false);
   return (
     <>
       <section className="directions">
@@ -22,13 +30,11 @@ function Directions() {
             <ul className="directions-middle__list">
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--1">
                     <img
-                      width={62}
-                      height={62}
-                      src={trade}
+                      src={kluch}
                       alt="trade"
-                      className="directions-middle-card__img"
+                      className="directions-middle-card__img "
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
@@ -38,7 +44,7 @@ function Directions() {
                     Mijozlar bilan munosabat- larni boshqarishni avtomat-
                     lashtirish uchun qulay va optimal yondashuv
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--1">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -48,23 +54,20 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--2">
                     <img
-                      width={62}
-                      height={62}
                       src={trade}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    Savdo boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Savdo jarayonlari boshqa-ruvi, nazorati va analizi
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--2">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -74,23 +77,21 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--3">
                     <img
-                      width={62}
-                      height={62}
-                      src={trade}
+                      src={resource}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    HR boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Kerakli kadrlar va barcha xodimlar maʼlumotlar qoʼl
+                    ostingizda!
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--3">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -100,23 +101,21 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--4">
                     <img
-                      width={62}
-                      height={62}
-                      src={trade}
+                      src={saveMoney}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    Hisob-kitob boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Xodimlarning maoshi va kompaniyaning hisob-kitobi uchun
+                    optimal yondashuv
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--4">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -126,23 +125,21 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--5">
                     <img
-                      width={62}
-                      height={62}
-                      src={trade}
+                      src={money}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    Kassa boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Kompaniyaning barcha turdagi pul mablagʼlarining aniq va
+                    ishonchli yuritilishi
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--5">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -152,23 +149,21 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--6">
                     <img
-                      width={62}
-                      height={62}
-                      src={trade}
+                      src={house}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    Sklad boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Sklad boʼlimi savdo vaqtida tayyor mahsulotlar harakati va
+                    qoldigʼini real vaqt reji-mida koʼrib turish imkoniyati.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn  directions-middle-card__btn--6">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -178,23 +173,17 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
-                    <img
-                      width={62}
-                      height={62}
-                      src={trade}
-                      alt="trade"
-                      className="directions-middle-card__img"
-                    />
+                  <div className="directions-middle-card__box directions-middle-card__box--7">
+                    <img src={setting} alt="trade" className=" " />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    Nazorat boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Korxona ichki qonun-qoida-lari va tartibi nazoratini yagona
+                    baza orqali nazorat qilish imkoniyatini beradi
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--7">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -204,23 +193,21 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box">
+                  <div className="directions-middle-card__box directions-middle-card__box--8">
                     <img
-                      width={62}
-                      height={62}
-                      src={trade}
+                      src={star}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    CRM boʼlimi
+                    Rahbar boʼlimi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Mijozlar bilan munosabat- larni boshqarishni avtomat-
-                    lashtirish uchun qulay va optimal yondashuv
+                    Rahbar uchun barcha imko-niyatlar bir joyda. Rahbar sifatida
+                    sizning vaqtingiz ejaladi, samaradorlik oshadi.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--8">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -230,9 +217,214 @@ function Directions() {
               </li>
             </ul>
           </div>
+          {shower ? (
+            <div className="directions-middle">
+              <ul className="directions-middle__list">
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        width={62}
+                        height={62}
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li className="directions-middle__item">
+                  <div className="directions-middle__card">
+                    <div className="directions-middle-card__box">
+                      <img
+                        src={trade}
+                        alt="trade"
+                        className="directions-middle-card__img"
+                      />
+                    </div>
+                    <h3 className="directions-middle-card__subject">
+                      CRM boʼlimi
+                    </h3>
+                    <p className="directions-middle-card__text">
+                      Mijozlar bilan munosabat- larni boshqarishni avtomat-
+                      lashtirish uchun qulay va optimal yondashuv
+                    </p>
+                    <button className="directions-middle-card__btn">
+                      Batafsil{" "}
+                      <span className="directions-middle-card__btn-span">
+                        <AiOutlineRight />
+                      </span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
           <div className="directions-bottom">
-            <button className="directions-bottom__btn">
-              <img width={280} height={200} src={button} alt="btn" />
+            <button
+              onClick={() => setShower(!shower)}
+              className="directions-bottom__btn"
+            >
+              {shower ? "Yopish" : " Barcha bo`limlar"}
             </button>
           </div>
         </div>

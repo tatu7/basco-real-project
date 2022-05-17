@@ -57,13 +57,13 @@
     &--img {
       position: absolute;
       height: 60%;
-      width: 65%;
+      width: 53%;
       top: 8%;
       right: 6%;
     }
     &--card {
       opacity: 1;
-      right: 35%;
+      right: 25%;
       position: absolute;
       bottom: 25%;
       width: 24rem;
@@ -76,14 +76,15 @@
       border-radius: 0.8rem;
       &--left {
         padding: 0.3rem;
-        padding-left: 1.5rem;
+        padding-left: 1.2rem;
         padding-top: 1.4rem;
         &--title {
           font-size: 1.2rem;
           font-weight: 900;
+          color: black;
         }
         &--number {
-          font-size: 2.7rem;
+          font-size: 2.5rem;
           font-weight: 800;
         }
         &--description {
@@ -94,7 +95,7 @@
       &--right {
         padding-top: 2.9rem;
         &--number {
-          font-size: 2.7rem;
+          font-size: 2.5rem;
           font-weight: 800;
         }
         &--description {
@@ -106,14 +107,14 @@
         position: absolute;
         height: 1.5rem;
         width: 1.5rem;
-        bottom: 9%;
+        bottom: 12%;
         right: 5%;
       }
       &--img--2 {
         position: absolute;
         height: 1.5rem;
         width: 1.5rem;
-        bottom: 9%;
+        bottom: 12%;
         right: 60%;
       }
     }

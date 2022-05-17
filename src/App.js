@@ -7,6 +7,7 @@ import Suggestions from "./Components/Suggestions/Suggestions";
 import Questions from "./Components/Questions/Questions";
 import Platform from "./Components/Platform/Platform";
 import Statistics from "./Components/Statistica/Statistics";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Directions />
       <Suggestions />
       <Questions />
+      <Footer />
     </div>
   );
 }

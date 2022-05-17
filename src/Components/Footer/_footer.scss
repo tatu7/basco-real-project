@@ -1,0 +1,39 @@
+.footer {
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10rem auto;
+    margin-bottom: 5rem;
+    &--img {
+      &--1 {
+        position: absolute;
+        z-index: 2;
+        left: 40%;
+      }
+      &--2 {
+        z-index: 3;
+        position: absolute;
+        left: 44%;
+        top: -8rem;
+      }
+      &--3 {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+      }
+    }
+  }
+  &__body {
+    text-align: center;
+    &--title {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+    &--parag {
+      font-size: 1.7rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
