@@ -1,3 +1,5 @@
+import "./_header.scss";
+import "../main.scss";
 import React, { useState } from "react";
 import logo from "../../Assets/images/logo.png";
 import mainImg from "../../Assets/images/mainImg.png";
@@ -15,19 +17,20 @@ import headIMg12 from "../../Assets/images/headImg-12.png";
 import star from "../../Assets/images/icon-8.png";
 import human from "../../Assets/images/icon-3.png";
 import savdo from "../../Assets/images/icon-5.png";
-import "./_header.scss";
-import "../main.scss";
+
 import Modal from "../../UI/Modal/Modal";
 function Header() {
   const [shower, setShower] = useState(false);
   return (
     <section className="header">
-      <div className="container">
+      <div className="">
         <div className="header__nav">
           <div className="header__nav--logo">
             <img src={logo} alt="" />
           </div>
-          <div className="header__nav--number">91 778 01 01</div>
+          <a className="header__nav--number" href="tel:917880101">
+            91 778 01 01
+          </a>
         </div>
         <div className="header__main">
           <div className="header__main--left">
@@ -44,42 +47,40 @@ function Header() {
               qiling. Basco ERP platformasi bilan samaradorligingiz oshib,
               xarajatlaringiz kamayadi.
             </p>
-            <div className="header__main--left--buttons">
-              <a
-                onClick={() => setShower(true)}
-                className="header__main--left--buttons--1"
-                href="#aa"
-              >
-                Demo videoni ko`rish
-              </a>
-              <a href="#dd" className="header__main--left--buttons--2">
-                Telefonda suhbat belgilash
-              </a>
-            </div>
+
+            <a
+              onClick={() => setShower(true)}
+              className="header__main--left--buttons--1"
+              href="#aa"
+            >
+              Demo videoni ko`rish
+            </a>
+            <a href="#dd" className="header__main--left--buttons--2">
+              Telefonda suhbat belgilash
+            </a>
           </div>
           <div className="header__main--right">
             <img className="img-1" src={mainImg} alt="" />
             <img className="img-2" src={headIMg1} alt="" />
             <img className="img-3" src={headIMg2} alt="" />
-            <img className="img-4" src={headIMg3} alt="" />
+            {/* <img className="img-4" src={headIMg3} alt="" /> */}
             <img className="img-5" src={headIMg4} alt="" />
             <img className="img-6" src={headIMg5} alt="" />
             <img className="img-7" src={headIMg6} alt="" />
-            {/* <img className="img-8" src={headIMg7} alt="" /> */}
             <img className="img-9" src={headIMg8} alt="" />
             <img className="img-10" src={headIMg9} alt="" />
             <img className="img-11" src={headIMg11} alt="" />
             <img className="img-12" src={headIMg12} alt="" />
-            <div className="header__main--right--buttons">
-              <div className="header__main--right--buttons--1">
-                <div className="header__main--right--buttons--1--left">
-                  <img src={star} alt="star-imag" />
-                </div>
-                <div className="header__main--right--buttons--1--right">
-                  <a href="#ss">Rahbar bo`limi</a>
-                </div>
+
+            {/* <div className="header__main--right--buttons--1">
+              <div className="header__main--right--buttons--1--left">
+                <img src={star} alt="star-imag" />
+              </div>
+              <div className="header__main--right--buttons--1--right">
+                <a href="#ss">Rahbar bo`limi</a>
               </div>
             </div>
+
             <div className="header__main--right--buttons--human">
               <div className="header__main--right--buttons--human--2">
                 <div className="header__main--right--buttons--human--2--left">
@@ -99,7 +100,7 @@ function Header() {
                   <a href="#ss">Savdo bo`limi</a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

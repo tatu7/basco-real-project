@@ -7,9 +7,9 @@ import { useState } from "react";
 const Suggestions = () => {
   const [clicked, setClicked] = useState(1);
   return (
-    <>
+    <div className="suggestions__box">
       <section className="suggestions">
-        <div className=" container">
+        <div className=" ">
           <div className="suggestions-top">
             <ul className="suggestions-top__list">
               <li className="suggestions-top__item">
@@ -58,11 +58,12 @@ const Suggestions = () => {
                     />
                   </div>
                   <h3 className="suggestions-middle-card__subject">
-                    Savdo bo’limi imkoniyatlari
+                    Bunga ishonmagan bo’lardingiz
                   </h3>
                   <p className="suggestions-middle-card__text">
-                    Basco ERP platformasining savdo bo’limidagi siz uchunqiziq
-                    imkoniyatlar
+                    Birgina avtomatlashtirish orqali biznesingiz samaradorligini
+                    23% ga oshirib, xarajatlaringizni 29% ga qisqartirishi
+                    mumkin ekan.
                   </p>
                 </div>
               </li>
@@ -76,10 +77,12 @@ const Suggestions = () => {
                     />
                   </div>
                   <h3 className="suggestions-middle-card__subject">
-                    CRM bo’limi imkoniyatlari
+                    ERP platforformasi haqida
                   </h3>
                   <p className="suggestions-middle-card__text">
-                    Sotuv operatorlaringiz bu imkoniyatlarni xohlagan bo’lardi
+                    Siz eng tez rivojlanib borayotgan ishlab chiqarish
+                    kompaniyalarning sirini fosh qildingiz! Bu - ERP
+                    platformasi.
                   </p>
                 </div>
               </li>
@@ -93,11 +96,11 @@ const Suggestions = () => {
                     />
                   </div>
                   <h3 className="suggestions-middle-card__subject">
-                    Rahbar bo’limi imkoniyatlari
+                    BASCO ERP platformasi
                   </h3>
                   <p className="suggestions-middle-card__text">
-                    Siz rahbarmisiz? Bu platforma bilan ortib qolgan vaqtingizni
-                    nima qilishni bilmay qolasiz
+                    Basco ERP platformasini kompaniyangizga joriy qilganingizda
+                    hech narsa avvalgidek bo’lmaydi.
                   </p>
                 </div>
               </li>
@@ -105,7 +108,7 @@ const Suggestions = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,10 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==mobile {
+    @media (max-width: 392px) {
+      @content;
+    }
+  }
+}
 .directions {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -7,6 +14,8 @@
   margin: 0 auto;
   height: auto;
   position: relative;
+  width: 1460px;
+
   // background: linear-gradient(
   //   24.99deg,
   //   #11172a 8.49%,
@@ -14,7 +23,6 @@
   //   #2f3a5e 91.51%
   // );
   background-color: #11172a;
-  border-radius: 1rem;
   &-top {
     display: flex;
     width: 69%;
@@ -26,14 +34,14 @@
     padding: 0;
     &__subject {
       font-weight: 700;
-      font-size: 35px;
+      font-size: 40px;
       color: #ffffff;
     }
     &__text {
       width: 85%;
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 36px;
       display: flex;
       align-items: flex-end;
@@ -72,8 +80,10 @@
       margin-bottom: 5rem;
     }
     &__card {
-      margin-top: 2rem;
-      margin-left: 2.4rem;
+      margin-top: 3.2rem;
+      margin-left: 2.8rem;
+      width: 260px;
+      height: 326px;
     }
     &-card {
       &__box {
@@ -170,7 +180,7 @@
         background: #a66dff;
         margin-bottom: 3rem;
         border: transparent;
-        border-radius: 0.5rem;
+        border-radius: 1.2rem;
         cursor: pointer;
         &-span {
           margin-left: 5px;

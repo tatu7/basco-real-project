@@ -13,12 +13,13 @@ function About() {
       <h2 className="about__title">Hurmatli biznes egasi...</h2>
       <div className="about__parag">
         Bugun biznesni boshqarish, uni yangi bosqichlarga olib chiqish har
-        qachon-gidan ham qiyin vazifa hisoblanadi.Har bir biznesning o’ziga
-        yarasha jarayonlari, maqsadlari va talablari bo’ladi. Agar biznesda
-        barcha jarayonlarni, maqsadlarni va xodimlarni birlashtiradigan yagona
-        texnologiya mavjud bo’lmasa, bugungi raqobatdosh bozorga dosh berish va
-        rivojlanish mumkin bo’lmay qoladi.Agar sizning biznesingiz ham bir
-        nechta bo’lim-larga va katta jamoaga ega bo’lsa…Sizga barcha biznes
+        qachon-gidan ham qiyin vazifa hisoblanadi. <br />
+        <br /> Har bir biznesning o’ziga yarasha jarayonlari, maqsadlari va
+        talablari bo’ladi. Agar biznesda barcha jarayonlarni, maqsadlarni va
+        xodimlarni birlashtiradigan yagona texnologiya mavjud bo’lmasa, bugungi
+        raqobatdosh bozorga dosh berish va rivojlanish mumkin bo’lmay qoladi.{" "}
+        <br /> <br /> Agar sizning biznesingiz ham bir nechta bo’lim-larga va
+        katta jamoaga ega bo’lsa… <br /> <br /> Sizga barcha biznes
         jarayonlarini avtomatlash-tiradigan, xodimlaringiz samaradorligini
         oshiradigan va xarajatlaringizni bir necha baravarga qisqartiradigan
         yagona yechim kerak.

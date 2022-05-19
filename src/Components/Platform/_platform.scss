@@ -1,16 +1,27 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==mobile {
+    @media (max-width: 392px) {
+      @content;
+    }
+  }
+}
 .platform {
-  padding: 5rem;
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
+  width: 1460px;
+
   &__left {
     position: relative;
+    margin-top: 107px;
+    margin-left: 177px;
     &--title {
-      font-size: 2.6rem;
+      font-size: 4rem;
       font-weight: 900;
       line-height: 1.4;
       letter-spacing: 0.1rem;
       margin-bottom: 4rem;
+      width: 550px;
     }
     &--parag {
       &--1,
@@ -18,34 +29,41 @@
       &--3,
       &--4 {
         margin: 2rem 0;
-        font-size: 1.9rem;
+        font-size: 2.4rem;
         line-height: 1.4;
+        width: 590px;
       }
     }
     &--more--button {
+      margin-bottom: 103px;
       button {
         border: none;
         text-align: center;
         background-color: #ffdea3;
         color: #fff;
-        width: 20rem;
-        height: 5rem;
-        border-radius: 0.5rem;
+        width: 16.8rem;
+        height: 4.9rem;
+        border-radius: 1.2rem;
         font-weight: 800;
         cursor: pointer;
       }
     }
     &--img--1 {
       position: absolute;
-      height: 3rem;
+      height: 4.4rem;
+      width: 4.4rem;
       transform: rotate(15deg);
-      right: -10%;
-      bottom: 10%;
+      right: -16%;
+      bottom: 100px;
+      @include responsive(mobile) {
+        right: 40px;
+      }
     }
     &--img--2 {
       position: absolute;
-      height: 3rem;
-      left: -10%;
+      height: 4.4rem;
+      width: 4.4rem;
+      left: -18%;
       top: 30%;
       transform: rotate(15deg);
     }
@@ -54,49 +72,58 @@
     position: relative;
     &--img--1 {
       position: absolute;
-      height: 45%;
-      top: 1%;
-      left: 10%;
+      height: 261px;
+      width: 435px;
+      top: 104px;
+      right: 190px;
     }
     &--img--2 {
       position: absolute;
-      height: 45%;
-      bottom: 11%;
-      right: 1%;
-      width: 65%;
+      height: 286px;
+      width: 421px;
+      top: 370px;
+      right: 80px;
     }
     &--img--3 {
       position: absolute;
-      height: 30rem;
-      bottom: 30%;
-      right: 1%;
-      width: 60%;
+      height: 384px;
+      width: 408px;
+      top: 218px;
+      right: 70px;
     }
     &--img--4 {
       position: absolute;
-      height: 3rem;
-      right: 10%;
+      height: 4.2rem;
+      width: 4.2rem;
+      right: 91px;
+      top: 50px;
       transform: rotate(20deg);
     }
     &--img--5 {
       position: absolute;
-      height: 4rem;
-      bottom: 1%;
-      right: 20%;
+      height: 4.2rem;
+      width: 4.2rem;
+      bottom: 50px;
+      right: 190px;
       transform: rotate(20deg);
     }
     &--img--6 {
       z-index: 200;
       position: absolute;
-      height: 14rem;
-      bottom: 46%;
-      right: 2%;
+      height: 14.2rem;
+      width: 14.2rem;
+      top: 260px;
+      right: 52px;
     }
     &--img--7 {
       position: absolute;
-      height: 4rem;
-      top: 40%;
-      left: 14%;
+      height: 4.2rem;
+      width: 4.2rem;
+      top: 330px;
+      left: 45px;
+      @include responsive(mobile) {
+        left: 2px;
+      }
     }
     &--button {
       position: absolute;
@@ -109,8 +136,8 @@
       background-color: #fff;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
         rgba(0, 0, 0, 0.23) 0px 3px 6px;
-      bottom: 7%;
-      left: 38%;
+      top: 623px;
+      right: 258px;
       cursor: pointer;
       img {
         height: 90%;

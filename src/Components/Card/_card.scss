@@ -1,36 +1,58 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==mobile {
+    @media (max-width: 392px) {
+      @content;
+    }
+  }
+}
+.card__box {
+  width: 1460px;
+  margin: 0 auto;
+  @include responsive(mobile) {
+    width: 352px;
+  }
+}
 .card {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   background-color: #11172a;
-  height: 51vh;
+  height: 365px;
   color: #fff;
-  border-radius: 1rem;
-  width: 88%;
+  border-radius: 3rem;
+  width: 1200px;
   margin: 4rem auto;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 40px 4px;
+  box-shadow: -10.9px -15.6px 68px rgba(0, 7, 5, 0.3);
+  margin-top: 86px;
+  justify-content: center;
+  @include responsive(mobile) {
+    margin: 0 auto;
+    width: 1190px;
+  }
   &__left {
     padding: 3rem;
-    padding-left: 5rem;
-    padding-top: 6rem;
+    padding-left: 124px;
+    padding-top: 40px;
     &--title {
-      font-size: 2.2rem;
+      font-size: 35px;
+      margin-bottom: 7px;
     }
     &--parag {
-      line-height: 1.6;
-      font-size: 1.8rem;
-      font-weight: 200;
-      margin-top: 1.4rem;
+      width: 642px;
+      line-height: 37px;
+      font-size: 25px;
+      font-weight: 300;
     }
     &--author {
-      font-size: 1.6rem;
+      font-size: 2.5rem;
       font-weight: 400;
-      margin-top: 1.4rem;
+      margin-top: 2.2rem;
     }
   }
   &__right {
     img {
-      height: 35rem;
-      margin-left: 25rem;
+      height: 398px;
+      width: 398px;
+      margin-left: 18px;
       margin-top: -3rem;
     }
   }

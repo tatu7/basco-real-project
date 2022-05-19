@@ -1,6 +1,17 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==mobile {
+    @media (max-width: 392px) {
+      @content;
+    }
+  }
+}
+.questions__box {
+  width: 1460px;
+  margin: 0 auto;
+}
 .questions {
   display: grid;
-  width: 59%;
+  width: 965px;
   grid-template-columns: repeat(1, 1fr);
   flex-direction: column;
   justify-content: center;
@@ -9,6 +20,7 @@
   height: auto;
   padding: 5rem 0;
   margin-bottom: 5rem;
+
   &__subject {
     font-style: normal;
     font-weight: 700;

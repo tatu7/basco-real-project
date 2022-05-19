@@ -6,7 +6,7 @@ import "../main.scss";
 const Questions = () => {
   const [questions, setQuestions] = useState(data);
   return (
-    <>
+    <div className="questions__box">
       <div className="questions container">
         <h3 className="questions__subject">Eng ko‘p so‘raladigan savollar </h3>
         <div className="questions__wrapper">
@@ -17,7 +17,7 @@ const Questions = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

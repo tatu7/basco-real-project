@@ -1,35 +1,55 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==mobile {
+    @media (max-width: 392px) {
+      @content;
+    }
+  }
+}
 .about {
   height: auto;
   position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 8rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 1460px;
+  @include responsive(mobile) {
+    width: 1000px;
+  }
   &__title {
     display: block;
     text-align: center;
     margin: 4rem 0;
     font-weight: 900;
-    font-size: 2.4rem;
+    font-size: 40px;
     margin-top: 5rem;
+    @include responsive(mobile) {
+      font-size: 16px;
+    }
   }
   &__parag {
     display: block;
     text-align: left;
     margin: 0 auto;
-    width: 32%;
-    font-size: 1.6rem;
-    line-height: 1.8;
+    width: 601px;
+    font-size: 25px;
+    line-height: 35px;
+    @include responsive(mobile) {
+      font-size: 11px;
+    }
   }
   &--button {
-    margin: 4rem auto;
+    margin: 0 auto;
+    margin-top: 50px;
     button {
       border: none;
       text-align: center;
       background-color: #a66dff;
       color: #fff;
-      width: 20rem;
-      height: 5rem;
-      border-radius: 0.5rem;
+      width: 173px;
+      height: 48px;
+      border-radius: 12px;
       font-weight: 800;
       cursor: pointer;
       outline: none;
@@ -39,27 +59,48 @@
 .img {
   &--1 {
     position: absolute;
-    height: 4rem;
-    top: 10rem;
+    height: 57px;
+    width: 57px;
+    top: 205px;
+    left: 100px;
     left: 8rem;
+    @include responsive(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
   &--2 {
     position: absolute;
-    height: 4rem;
-    top: 20rem;
-    right: 8rem;
+    height: 58px;
+    width: 58px;
+    top: 273px;
+    right: 82px;
+    @include responsive(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
   &--3 {
     position: absolute;
-    height: 30rem;
-    top: 30rem;
-    right: 12rem;
+    width: 383px;
+    height: 317px;
+    top: 52rem;
+    right: 74px;
+    @include responsive(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
   &--4 {
     position: absolute;
-    height: 4rem;
-    bottom: 15rem;
-    left: 35rem;
+    height: 62px;
+    width: 62px;
+    top: 812px;
+    left: 252px;
     transform: rotate(15deg);
+    @include responsive(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 }

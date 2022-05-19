@@ -34,7 +34,7 @@ function Statistics() {
               </p>
             </div>
           </div>
-          <div className="statistica__right--item statistica__right--item--2 ">
+          <div className="statistica__right--item statistica__right--item--2  ajrat">
             <div className="statistica__right--item--left">
               <h2>2</h2>
             </div>

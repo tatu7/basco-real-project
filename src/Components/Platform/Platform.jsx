@@ -15,7 +15,7 @@ function Platform() {
   const [shower, setShower] = useState(false);
   const [showerModal, setShowerModal] = useState(false);
   return (
-    <section className="platform container">
+    <section className="platform ">
       <div className="platform__left">
         <h2 className="platform__left--title">
           Tanishing! Basco ERP <br /> platformasi

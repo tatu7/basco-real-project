@@ -8,20 +8,21 @@ import Questions from "./Components/Questions/Questions";
 import Platform from "./Components/Platform/Platform";
 import Statistics from "./Components/Statistica/Statistics";
 import Footer from "./Components/Footer/Footer";
+import "./Components/main.scss";
 
 function App() {
   return (
     <div className="App">
-      <Header /> */
-      <About />
-      <Card />
-      <Advice />
-      <Statistics />
+      {/* <Header /> */}
+      {/* <About /> */}
+      {/* <Card /> */}
+      {/* <Advice /> */}
+      {/* <Statistics /> */}
       <Platform />
-      <Directions />
+      {/*<Directions />
       <Suggestions />
       <Questions />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
