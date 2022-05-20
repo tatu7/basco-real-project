@@ -7,7 +7,7 @@ import p3 from "../../Assets/images/footer-img-3.png";
 function Footer() {
   return (
     <div className="footer__box">
-      <section className="footer container">
+      <section className="footer ">
         <div className="footer__head">
           <img className="footer__head--img--1" src={p2} alt="" />
           <img className="footer__head--img--2" src={p1} alt="" />

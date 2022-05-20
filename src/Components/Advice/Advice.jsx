@@ -50,6 +50,47 @@ function Advice() {
           )}
           <img className="advice__left--img--1" src={star} alt="" />
           <img className="advice__left--img--2" src={plus} alt="" />
+          {shower ? (
+            <Fade top>
+              <div className="hide__parag">
+                <p>
+                  Bu xuddi terlab, qattiq yugurib ham joyidan siljimaslikka
+                  o’xshaydi. Lekin… Siz bu muammoni birgina unikal yechim orqali
+                  hal qilish mumkinligini bilasizmi?
+                  <b> Unday bo’lsa, sizga yangiligimiz bor! </b> Siz, birgina,
+                  biznesingiz jarayonlarini avtomatlashtirish orqali bu
+                  muammolarni oson bartaraf etishingiz mumkin. Bunda sizga eng
+                  tez rivojlanib o’sib borayotgan kompaniyalarning siri bo’lgan
+                  biznesni avtomatlashtirish dasturi yordam beradi. ERP
+                  (Enterprise Resource Planning) dasturlari bugungi kunda
+                  dunyoning yetakchi ishlab chiqarish, savdo va xizmat
+                  ko’rsatish kompaniyalari tomonidan foydalaniladigan tizim
+                  hisoblanadi. Bu tizimni siz biznesingizda o’rnatganingizda…
+                  Jarayonlarda yangi “portlash”ga guvoh bo’lasiz. Rost.
+                  Samaradorlik bir necha baravarga oshganini guvohi bo’lasiz.
+                  Xarajatlaringizni ko’paytirmasdan turib, daromadingizni bir
+                  necha baravarga oshira olasiz. Raqobatchilaringiz sizni
+                  o’zlari uchun yangidan kashf qilishadi. Bozorda sizga
+                  o’xshagan kuchli, xavfli o’yinchi paydo bo’lganiga amin
+                  bo’lishadi. Mamnun mijozlaringiz soni oshib, qisqa muddat
+                  ichida bozorni egallab olishingiz ham mumkin bo’ladi. Va
+                  o’zingiz uchun yangi bozorlarni va imkoniyatlarni ochishingiz
+                  mumkin bo’ladi. “Imkoniyat bilan tanishish”
+                </p>
+                {shower ? (
+                  <div className="advice__left--button">
+                    <button onClick={() => setShower(!shower)}>
+                      {shower ? "Yopish" : "Davomini o`qish "}
+                    </button>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </Fade>
+          ) : (
+            ""
+          )}
         </div>
         <div className="advice__right">
           <img className="advice__right--img" src={person} alt="" />
@@ -79,46 +120,6 @@ function Advice() {
           <img className="advice__right--img--1" src={halqa} alt="" />
           <img className="advice__right--img--2" src={aylana} alt="" />
         </div>
-        {shower ? (
-          <Fade top>
-            <div className="hide__parag">
-              <p>
-                Bu xuddi terlab, qattiq yugurib ham joyidan siljimaslikka
-                o’xshaydi. Lekin… Siz bu muammoni birgina unikal yechim orqali
-                hal qilish mumkinligini bilasizmi?
-                <b> Unday bo’lsa, sizga yangiligimiz bor! </b> Siz, birgina,
-                biznesingiz jarayonlarini avtomatlashtirish orqali bu
-                muammolarni oson bartaraf etishingiz mumkin. Bunda sizga eng tez
-                rivojlanib o’sib borayotgan kompaniyalarning siri bo’lgan
-                biznesni avtomatlashtirish dasturi yordam beradi. ERP
-                (Enterprise Resource Planning) dasturlari bugungi kunda
-                dunyoning yetakchi ishlab chiqarish, savdo va xizmat ko’rsatish
-                kompaniyalari tomonidan foydalaniladigan tizim hisoblanadi. Bu
-                tizimni siz biznesingizda o’rnatganingizda… Jarayonlarda yangi
-                “portlash”ga guvoh bo’lasiz. Rost. Samaradorlik bir necha
-                baravarga oshganini guvohi bo’lasiz. Xarajatlaringizni
-                ko’paytirmasdan turib, daromadingizni bir necha baravarga oshira
-                olasiz. Raqobatchilaringiz sizni o’zlari uchun yangidan kashf
-                qilishadi. Bozorda sizga o’xshagan kuchli, xavfli o’yinchi paydo
-                bo’lganiga amin bo’lishadi. Mamnun mijozlaringiz soni oshib,
-                qisqa muddat ichida bozorni egallab olishingiz ham mumkin
-                bo’ladi. Va o’zingiz uchun yangi bozorlarni va imkoniyatlarni
-                ochishingiz mumkin bo’ladi. “Imkoniyat bilan tanishish”
-              </p>
-              {shower ? (
-                <div className="advice__left--button">
-                  <button onClick={() => setShower(!shower)}>
-                    {shower ? "Yopish" : "Davomini o`qish "}
-                  </button>
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-          </Fade>
-        ) : (
-          ""
-        )}
       </section>
     </div>
   );

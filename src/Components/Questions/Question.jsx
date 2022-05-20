@@ -10,9 +10,7 @@ const Question = ({ title, info }) => {
   return (
     <article className="question">
       <div className="question__box">
-        <h4 className="question__subject" style={{ fontSize: "3.5rem" }}>
-          {title}
-        </h4>
+        <h4 className="question__subject">{title}</h4>
         <button
           className="question__btn"
           onClick={() => setShowInfo(!showInfo)}

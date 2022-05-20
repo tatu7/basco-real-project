@@ -1,0 +1,105 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint==big {
+    @media (min-width: 1300px) {
+      @content;
+    }
+  }
+  @if $breakpoint==desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint==planshet {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+  @if $breakpoint==small {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+}
+.blog {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.blog_box {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+
+  @include responsive(desktop) {
+    width: 1200px;
+  }
+  @include responsive(tablet) {
+    width: 600px;
+  }
+  @include responsive(planshet) {
+    width: 450px;
+  }
+  @include responsive(mobile) {
+    width: 350px;
+  }
+  @include responsive(small) {
+    width: 250px;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog_text {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header_blog {
+  text-align: left;
+  width: 100%;
+  max-width: 1000px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  @include responsive(tablet) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  @include responsive(small) {
+    font-size: 10px;
+  }
+}
+
+.text_blog1 {
+  width: 100%;
+  max-width: 1000px;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 30px;
+  @include responsive(tablet) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  @include responsive(small) {
+    font-size: 11px;
+  }
+}
+
+.text_111 {
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

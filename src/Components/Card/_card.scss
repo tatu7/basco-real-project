@@ -4,12 +4,40 @@
       @content;
     }
   }
+  @if $breakpoint==desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==big {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  }
+  @if $breakpoint==toqqiz {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint==olti {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
 }
 .card__box {
-  width: 1460px;
+  width: 1349px;
   margin: 0 auto;
+  @include responsive(desktop) {
+    width: 1460px;
+  }
+  @include responsive(big) {
+    width: 100%;
+  }
   @include responsive(mobile) {
-    width: 352px;
+    width: 393px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 .card {
@@ -24,28 +52,101 @@
   box-shadow: -10.9px -15.6px 68px rgba(0, 7, 5, 0.3);
   margin-top: 86px;
   justify-content: center;
+  @include responsive(big) {
+    width: 90%;
+    height: 320px;
+  }
+  @include responsive(toqqiz) {
+    height: 280px;
+    border-radius: 2rem;
+  }
+  @include responsive(olti) {
+    height: 180px;
+  }
   @include responsive(mobile) {
-    margin: 0 auto;
-    width: 1190px;
+    width: 349px;
+    height: 124px;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    background: linear-gradient(
+      9.68deg,
+      rgba(17, 23, 42, 0.89) 46.91%,
+      #2f3a5e 93.96%,
+      #11172a 93.96%
+    );
+    box-shadow: 10px -10px 39px rgba(0, 7, 5, 0.15);
   }
   &__left {
     padding: 3rem;
     padding-left: 124px;
     padding-top: 40px;
+    @include responsive(big) {
+      padding-left: 80px;
+    }
+    @include responsive(toqqiz) {
+      padding: 2.2rem;
+    }
+    @include responsive(mobile) {
+      padding: 0;
+      width: 50%;
+    }
     &--title {
       font-size: 35px;
       margin-bottom: 7px;
+      @include responsive(big) {
+        font-size: 26px;
+      }
+      @include responsive(toqqiz) {
+        font-size: 20px;
+      }
+      @include responsive(olti) {
+        font-size: 15px;
+      }
+      @include responsive(mobile) {
+        font-size: 12px;
+        margin-top: 1.2rem;
+      }
     }
     &--parag {
       width: 642px;
       line-height: 37px;
       font-size: 25px;
       font-weight: 300;
+      @include responsive(big) {
+        font-size: 18px;
+        line-height: 30px;
+        width: 90%;
+      }
+      @include responsive(toqqiz) {
+        width: 100%;
+        line-height: 2rem;
+        font-size: 14px;
+      }
+      @include responsive(olti) {
+        font-size: 9px;
+        line-height: 11px;
+      }
+      @include responsive(mobile) {
+        font-size: 7px;
+        line-height: 10px;
+        width: 100%;
+      }
     }
     &--author {
       font-size: 2.5rem;
       font-weight: 400;
       margin-top: 2.2rem;
+      @include responsive(big) {
+        font-size: 18px;
+      }
+      @include responsive(olti) {
+        font-size: 11px;
+        margin-top: 1rem;
+      }
+      @include responsive(mobile) {
+        font-size: 7px;
+        margin-top: 1rem;
+      }
     }
   }
   &__right {
@@ -54,6 +155,21 @@
       width: 398px;
       margin-left: 18px;
       margin-top: -3rem;
+      @include responsive(big) {
+        height: 300px;
+        width: 300px;
+        margin-left: 8px;
+      }
+      @include responsive(olti) {
+        height: 200px;
+        width: 200px;
+        margin-top: -0.9rem;
+      }
+      @include responsive(mobile) {
+        width: 108px;
+        height: 108px;
+        margin-top: -1rem;
+      }
     }
   }
 }

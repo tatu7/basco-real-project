@@ -4,42 +4,95 @@
       @content;
     }
   }
+  @if $breakpoint==desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==big {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  }
+  @if $breakpoint==ming {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+  @if $breakpoint==yettiyuz {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+}
+.header__box {
+  max-width: 1349px;
+  display: block;
+  margin: 0 auto;
+  height: 957px;
+  @include responsive(desktop) {
+    width: 1460px;
+    height: auto;
+    margin: 0 auto;
+  }
+  @include responsive(big) {
+    width: 100%;
+  }
+
+  @include responsive(mobile) {
+    width: 393px;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 .header {
   background-color: #181e30;
   height: 957px;
   color: #ffffff;
   position: relative;
-  width: 1460px;
   margin: 0 auto;
-  position: relative;
+  @include responsive(big) {
+    height: 850px;
+  }
+  @include responsive(ming) {
+    height: 700px;
+  }
+  @include responsive(yettiyuz) {
+    height: 450px;
+  }
   @include responsive(mobile) {
+    width: 393px;
     height: 715px;
-    width: 1460px;
-    margin: 0 auto;
   }
 }
 .header__nav {
   display: flex;
   justify-content: space-between;
-
   &--number {
     position: absolute;
     z-index: 10;
     display: inline-block;
     font-size: 2rem;
     top: 61px;
-    left: 1138px;
+    right: 138px;
     text-decoration: none;
     color: #ffffff;
+    @include responsive(big) {
+      font-size: 17px;
+      right: 80px;
+      top: 40px;
+    }
+    @include responsive(yettiyuz) {
+      font-size: 14px;
+    }
     @include responsive(mobile) {
       position: absolute;
       right: 35px;
-      top: 39px;
-
+      top: 36px;
       font-weight: 700;
       font-size: 13px;
       line-height: 20px;
+      right: 6rem;
     }
   }
   &--logo {
@@ -48,6 +101,19 @@
       width: 159px;
       top: 28px;
       margin-left: 179px;
+      @include responsive(big) {
+        margin-left: 90px;
+      }
+      @include responsive(ming) {
+        margin-left: 50px;
+        width: 120px;
+        height: 120px;
+      }
+      @include responsive(yettiyuz) {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+      }
       @include responsive(mobile) {
         height: 91px;
         width: 91px;
@@ -74,9 +140,28 @@
       font-size: 40px;
       letter-spacing: 2px;
       line-height: 1.7;
+      margin-left: 20rem;
+      @include responsive(big) {
+        font-size: 30px;
+        margin-left: 100px;
+        width: 570px;
+      }
+      @include responsive(ming) {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-left: 60px;
+      }
+      @include responsive(yettiyuz) {
+        font-size: 12px;
+        margin-left: 29px;
+        width: 300px;
+      }
       @include responsive(mobile) {
         font-size: 18px;
-        z-index: 200;
+        width: 350px;
+        margin-left: 0.2rem;
+        letter-spacing: 0px;
+        margin-top: 2rem;
       }
     }
     &--parag--2 {
@@ -85,12 +170,29 @@
       line-height: 28.5px;
       margin-left: 276px;
       width: 520px;
+      @include responsive(big) {
+        font-size: 16px;
+        margin-left: 170px;
+        width: 450px;
+      }
+      @include responsive(ming) {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 90px;
+        width: 360px;
+      }
+      @include responsive(yettiyuz) {
+        font-size: 11px;
+        width: 280px;
+        margin-left: 50px;
+        margin-top: 30px;
+      }
       @include responsive(mobile) {
         font-size: 10px;
         margin: 0;
-        width: 280px;
+        width: 270px;
         margin-left: 40px;
-        margin-top: 2rem;
+        margin-top: 4rem;
         line-height: 15px;
       }
     }
@@ -112,6 +214,23 @@
         font-weight: 900;
         margin-left: 200px;
         margin-top: 110px;
+        @include responsive(big) {
+          margin-left: 120px;
+          margin-top: 80px;
+        }
+        @include responsive(ming) {
+          margin-top: 40px;
+          width: 14rem;
+          font-size: 1.1rem;
+          margin-left: 90px;
+        }
+        @include responsive(yettiyuz) {
+          margin-left: 50px;
+          margin-top: 20px;
+          width: 100px;
+          font-size: 0.8rem;
+          padding: 0.4rem;
+        }
         @include responsive(mobile) {
           margin-left: 3px;
           margin-top: 32px;
@@ -127,8 +246,16 @@
         font-size: 1.6rem;
         margin-left: 85px;
         line-height: 25.5px;
+        @include responsive(ming) {
+          margin-left: 50px;
+          font-size: 1.3rem;
+        }
+        @include responsive(yettiyuz) {
+          margin-left: 20px;
+          font-size: 1rem;
+        }
         @include responsive(mobile) {
-          margin-left: 75px;
+          margin-left: 45px;
           margin-top: 32px;
           width: 10rem;
           font-size: 1.1rem;
@@ -144,11 +271,17 @@
     top: 15%;
     height: 35rem;
     z-index: 9;
+    @include responsive(big) {
+      height: 32rem;
+    }
+    @include responsive(ming) {
+      height: 25rem;
+    }
     @include responsive(mobile) {
-      height: 263px;
-      width: 201px;
-      left: 200px;
-      top: 42%;
+      height: 253px;
+      width: 221px;
+      left: 140px;
+      top: 50%;
     }
   }
   &-2 {
@@ -157,23 +290,33 @@
     top: 0;
     height: 25rem;
     z-index: 9;
+    @include responsive(big) {
+      height: 20rem;
+    }
     @include responsive(mobile) {
-      right: -72px;
-      top: 240px;
-      height: 187px;
-      width: 243px;
+      right: -1px;
+      top: 340px;
+      height: 120px;
+      width: 120px;
     }
   }
   &-3 {
     position: absolute;
-    left: 752px;
+    right: 202px;
     top: 80px;
     height: 247px;
     width: 303px;
     z-index: 9;
+    @include responsive(big) {
+      right: 200px;
+    }
+    @include responsive(ming) {
+      height: 150px;
+      width: 200px;
+    }
     @include responsive(mobile) {
       left: -32px;
-      top: 280px;
+      top: 320px;
       height: 207px;
       width: 263px;
     }
@@ -192,29 +335,38 @@
     height: 39rem;
     z-index: 9;
     @include responsive(mobile) {
-      left: -92px;
-      top: 380px;
-      height: 267px;
-      width: 263px;
+      left: -31px;
+      top: 440px;
+      height: 187px;
+      width: 183px;
     }
   }
   &-6 {
     ///////////////////////////////
     position: absolute;
-    right: 64%;
-    top: 70.9%;
+    right: 67%;
+    top: 70.4%;
     height: 5rem;
     z-index: 9;
+    @include responsive(big) {
+      top: 62%;
+    }
+    @include responsive(ming) {
+      top: 49%;
+      right: 72%;
+      height: 4rem;
+      display: none;
+    }
     @include responsive(mobile) {
-      left: 173px;
-      top: 280px;
-      height: 37px;
-      width: 33px;
+      left: 156px;
+      top: 324px;
+      height: 30px;
+      width: 27px;
     }
   }
   &-7 {
     position: absolute;
-    left: 40%;
+    left: 4%;
     bottom: 10%;
     height: 10rem;
     z-index: 9;
@@ -237,6 +389,14 @@
     height: 240px;
     width: 240px;
     z-index: 9;
+    @include responsive(ming) {
+      height: 180px;
+      width: 180px;
+    }
+    @include responsive(yettiyuz) {
+      height: 120px;
+      width: 120px;
+    }
     @include responsive(mobile) {
       height: 120px;
       width: 120px;
@@ -248,6 +408,14 @@
     top: 0;
     height: 48rem;
     width: 40rem;
+    @include responsive(ming) {
+      height: 42rem;
+      width: 34rem;
+    }
+    @include responsive(yettiyuz) {
+      height: 33rem;
+      width: 25rem;
+    }
     @include responsive(mobile) {
       height: 19rem;
       width: 19rem;
@@ -257,13 +425,27 @@
   }
   &-11 {
     position: absolute;
-    left: 16%;
-    top: 45%;
+    left: 14%;
+    top: 48%;
     height: 7rem;
+    @include responsive(big) {
+      top: 37%;
+      left: 8%;
+    }
+    @include responsive(ming) {
+      top: 33%;
+      left: 5%;
+      height: 5rem;
+    }
+    @include responsive(yettiyuz) {
+      top: 40%;
+      left: 2%;
+      height: 3rem;
+    }
     @include responsive(mobile) {
-      height: 2.5rem;
-      left: 3%;
-      top: 28%;
+      height: 3.5rem;
+      top: 33%;
+      left: 12%;
     }
   }
   &-12 {
@@ -271,9 +453,14 @@
     right: 5rem;
     bottom: 0;
     height: 10rem;
+    @include responsive(yettiyuz) {
+      height: 6rem;
+      right: 8rem;
+    }
     @include responsive(mobile) {
-      height: 5rem;
-      width: 12rem;
+      height: 6rem;
+      width: 14rem;
+      right: 9rem;
     }
   }
 }
@@ -290,14 +477,33 @@
       text-align: center;
       box-shadow: -10.9px -15.6px 68px rgba(0, 7, 5, 0.7);
       border-radius: 12px;
+      @include responsive(ming) {
+        width: 170px;
+        height: 5rem;
+        bottom: 98px;
+      }
+      @include responsive(yettiyuz) {
+        width: 120px;
+        height: 3.5rem;
+        right: 120px;
+        bottom: 60px;
+      }
       @include responsive(mobile) {
-        height: 11px;
-        width: 57px;
+        width: 111px;
+        height: 37px;
+        right: 90px;
+        bottom: 60px;
       }
       img {
         height: 3rem;
+        @include responsive(ming) {
+          height: 2.3rem;
+        }
+        @include responsive(yettiyuz) {
+          height: 1.8rem;
+        }
         @include responsive(mobile) {
-          height: 0.8rem;
+          height: 1.8rem;
         }
       }
       &--left {
@@ -306,10 +512,13 @@
         width: 30%;
         padding-top: 1.4rem;
         border-radius: 12px 0 0 12px;
+        @include responsive(yettiyuz) {
+          padding-top: 0.7rem;
+        }
         @include responsive(mobile) {
-          height: 17px;
+          height: 37px;
           border-radius: 5px 0 0 5px;
-          padding-top: 0.2rem;
+          padding-top: 0.7rem;
         }
       }
       &--right {
@@ -319,18 +528,28 @@
         padding-top: 1.5rem;
         width: 70%;
         border-radius: 0px 12px 12px 0;
+        @include responsive(yettiyuz) {
+          padding-top: 1rem;
+        }
         @include responsive(mobile) {
-          height: 17px;
+          height: 37px;
           border-radius: 0px 5px 5px 0;
           width: 100px;
-          padding-top: 0;
+          padding: 0;
+          padding-top: 10px;
         }
         a {
           text-decoration: none;
           color: #ffffff;
           font-size: 1.6rem;
+          @include responsive(ming) {
+            font-size: 1.4rem;
+          }
+          @include responsive(yettiyuz) {
+            font-size: 1.1rem;
+          }
           @include responsive(mobile) {
-            font-size: 0.4rem;
+            font-size: 1.1rem;
           }
         }
       }
@@ -345,16 +564,27 @@
       right: 1%;
       bottom: -6%;
       text-align: center;
+      @include responsive(ming) {
+        width: 180px;
+        height: 6em;
+      }
+      @include responsive(yettiyuz) {
+        width: 120px;
+        height: 3.5rem;
+      }
       @include responsive(mobile) {
-        height: 11px;
-        width: 57px;
-        bottom: 20%;
-        right: 3%;
+        width: 111px;
+        height: 37px;
+        right: 20px;
+        bottom: -30px;
       }
       img {
         height: 3rem;
+        @include responsive(yettiyuz) {
+          height: 1.6rem;
+        }
         @include responsive(mobile) {
-          height: 0.8rem;
+          height: 1.8rem;
         }
       }
       &--left {
@@ -364,10 +594,13 @@
         padding-top: 1.8rem;
         margin-left: -2rem;
         border-radius: 12px 0 0 12px;
+        @include responsive(yettiyuz) {
+          padding-top: 1rem;
+        }
         @include responsive(mobile) {
-          height: 17px;
+          height: 37px;
           border-radius: 5px 0 0 5px;
-          padding-top: 0.2rem;
+          padding-top: 0.7rem;
         }
       }
       &--right {
@@ -377,18 +610,24 @@
         text-align: center;
         background-color: #242f4c;
         border-radius: 0px 12px 12px 0;
+        @include responsive(yettiyuz) {
+          padding-top: 1rem;
+        }
         @include responsive(mobile) {
-          height: 17px;
+          height: 37px;
           border-radius: 0px 5px 5px 0;
           width: 100px;
-          padding-top: 0;
+          padding-top: 1rem;
         }
         a {
           text-decoration: none;
           color: #ffffff;
           font-size: 1.6rem;
+          @include responsive(yettiyuz) {
+            font-size: 1.2rem;
+          }
           @include responsive(mobile) {
-            font-size: 0.7rem;
+            font-size: 1.1rem;
           }
         }
       }
@@ -406,16 +645,30 @@
       border-radius: 0.6rem;
       box-shadow: -10.3px -14.7px 40px rgba(0, 7, 5, 0.24);
       text-align: center;
+      @include responsive(ming) {
+        width: 14rem;
+        right: 32%;
+      }
+      @include responsive(yettiyuz) {
+        width: 120px;
+        height: 3rem;
+      }
       @include responsive(mobile) {
-        height: 11px;
-        width: 57px;
-        bottom: 20%;
-        right: 3%;
+        width: 111px;
+        height: 30px;
+        right: 180px;
+        bottom: -45px;
       }
       img {
         height: 3rem;
+        @include responsive(ming) {
+          height: 2.7rem;
+        }
+        @include responsive(yettiyuz) {
+          height: 2.2rem;
+        }
         @include responsive(mobile) {
-          height: 0.8rem;
+          height: 1.8rem;
         }
       }
       &--left {
@@ -425,27 +678,41 @@
         width: 30%;
         padding-top: 0.6rem;
         @include responsive(mobile) {
-          height: 17px;
           border-radius: 5px 0 0 5px;
-          padding-top: 0.2rem;
+          height: 30px;
+          width: 30%;
+          padding-top: 0.7rem;
         }
       }
       &--right {
         padding-left: 1rem;
         text-align: center;
         padding-top: 0.8rem;
+        @include responsive(ming) {
+          margin-top: 0.5rem;
+        }
+        @include responsive(yettiyuz) {
+          margin-top: 0.2rem;
+        }
         @include responsive(mobile) {
-          height: 17px;
+          height: 37px;
           border-radius: 0px 5px 5px 0;
-          width: 100px;
-          padding-top: 0;
+          width: 70%;
+          padding-left: 0;
+          padding-top: 1rem;
         }
         a {
           text-decoration: none;
           color: #ffffff;
           font-size: 1.5rem;
+          @include responsive(ming) {
+            font-size: 1.2rem;
+          }
+          @include responsive(yettiyuz) {
+            font-size: 1rem;
+          }
           @include responsive(mobile) {
-            font-size: 0.7rem;
+            font-size: 1rem;
           }
         }
       }

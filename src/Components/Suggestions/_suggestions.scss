@@ -4,10 +4,30 @@
       @content;
     }
   }
+  @if $breakpoint==desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==big {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  }
 }
 .suggestions__box {
-  width: 1460px;
+  width: 1349px;
   margin: 0 auto;
+  @include responsive(desktop) {
+    width: 1460px;
+  }
+  @include responsive(big) {
+    width: 100%;
+  }
+  @include responsive(mobile) {
+    width: 393px;
+    height: auto;
+  }
 }
 .suggestions {
   display: grid;
@@ -16,6 +36,9 @@
   height: auto;
   padding: 5rem 0;
   padding-bottom: 8rem;
+  @include responsive(mobile) {
+    padding-bottom: 1rem;
+  }
   &-top {
     width: 100%;
     margin: 0 auto;
@@ -42,6 +65,13 @@
         background: #dddddd;
         border-radius: 0.5rem;
       }
+      @include responsive(big) {
+        font-size: 18px;
+      }
+      @include responsive(mobile) {
+        font-size: 19px;
+        padding: 0 10px;
+      }
     }
   }
   &-middle {
@@ -51,6 +81,12 @@
       display: grid;
       list-style-type: none;
       grid-template-columns: repeat(3, 1fr);
+      @include responsive(big) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @include responsive(mobile) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
     &-card {
       &__img {
@@ -59,6 +95,14 @@
         border-radius: 1.4rem;
         width: 386px;
         height: 318px;
+        @include responsive(big) {
+          width: 90%;
+          height: 220px;
+        }
+        @include responsive(mobile) {
+          width: 243px;
+          height: 183px;
+        }
       }
       &__subject {
         margin-top: 2.9rem;
@@ -67,6 +111,18 @@
         color: #e04776;
         text-align: left;
         padding-left: 3rem;
+        @include responsive(big) {
+          font-size: 16px;
+        }
+        @include responsive(mobile) {
+          width: 293px;
+          text-align: left;
+          display: block;
+          margin: 1rem auto;
+          margin-bottom: 1rem;
+          font-size: 16px;
+          padding-left: 2rem;
+        }
       }
       &__text {
         margin-top: 6px;
@@ -77,6 +133,19 @@
         letter-spacing: 0.1rem;
         text-align: left;
         padding-left: 3rem;
+        @include responsive(big) {
+          font-size: 13px;
+        }
+        @include responsive(mobile) {
+          width: 323px;
+          text-align: left;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 3rem;
+          font-size: 14px;
+          line-height: 21px;
+          padding-left: 4rem;
+        }
       }
     }
   }

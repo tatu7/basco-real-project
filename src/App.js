@@ -1,28 +1,19 @@
-import About from "./Components/About/About";
-import Card from "./Components/Card/Card";
-import Advice from "./Components/Advice/Advice";
-import Header from "./Components/Header/Header";
-import Directions from "./Components/Directions/Directions";
-import Suggestions from "./Components/Suggestions/Suggestions";
-import Questions from "./Components/Questions/Questions";
-import Platform from "./Components/Platform/Platform";
-import Statistics from "./Components/Statistica/Statistics";
-import Footer from "./Components/Footer/Footer";
 import "./Components/main.scss";
+import Blog1 from "./Components/Blog/Blog1";
+import { NavLink, Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import Blog2 from "./Components/Blog/Blog2";
+import Blog3 from "./Components/Blog/Blog3";
 
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
-      {/* <About /> */}
-      {/* <Card /> */}
-      {/* <Advice /> */}
-      {/* <Statistics /> */}
-      <Platform />
-      {/*<Directions />
-      <Suggestions />
-      <Questions />
-      <Footer /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog1" element={<Blog1 />} />
+        <Route path="/blog2" element={<Blog2 />} />
+        <Route path="/blog3" element={<Blog3 />} />
+      </Routes>
     </div>
   );
 }

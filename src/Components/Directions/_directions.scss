@@ -1,7 +1,46 @@
 @mixin responsive($breakpoint) {
-  @if $breakpoint==mobile {
-    @media (max-width: 392px) {
+  @if $breakpoint==big {
+    @media (min-width: 1300px) {
       @content;
+    }
+  }
+  @if $breakpoint==desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint==planshet {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint==mobile {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+  @if $breakpoint==small {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+}
+.carusel {
+  &__false {
+    display: flex;
+    @include responsive(planshet) {
+      display: none;
+    }
+  }
+  &__true {
+    display: none;
+    @include responsive(planshet) {
+      display: block;
     }
   }
 }
@@ -14,7 +53,16 @@
   margin: 0 auto;
   height: auto;
   position: relative;
-  width: 1460px;
+  width: 1349px;
+  margin: 0 auto;
+  @include responsive(desktop) {
+    width: 100%;
+  }
+
+  @include responsive(mobile) {
+    width: 393px;
+    height: auto;
+  }
 
   // background: linear-gradient(
   //   24.99deg,
@@ -32,10 +80,20 @@
     margin: 0 auto;
     margin-top: 7rem;
     padding: 0;
+    @include responsive(mobile) {
+      width: 90%;
+      margin-top: 3rem;
+    }
     &__subject {
       font-weight: 700;
       font-size: 40px;
       color: #ffffff;
+      @include responsive(desktop) {
+        font-size: 24px;
+      }
+      @include responsive(mobile) {
+        font-size: 16px;
+      }
     }
     &__text {
       width: 85%;
@@ -49,6 +107,15 @@
       color: #ffffff;
       margin: 2rem 5px;
       margin-bottom: 10rem;
+      @include responsive(desktop) {
+        font-size: 18px;
+      }
+      @include responsive(mobile) {
+        font-size: 11px;
+        margin-bottom: 2rem;
+        line-height: 16px;
+        text-align: left;
+      }
     }
   }
   &-middle {
@@ -66,6 +133,21 @@
       flex-wrap: wrap;
       margin: 0 auto;
       width: 96%;
+      @include responsive(desktop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+      }
+      @include responsive(planshet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+      }
+      @include responsive(mobile) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+      }
     }
     &__item {
       position: relative;
@@ -78,12 +160,23 @@
       filter: drop-shadow(-21.8px -31.1px 38.8px rgba(0, 7, 5, 0.2));
       margin: 0 auto;
       margin-bottom: 5rem;
+      @include responsive(desktop) {
+        width: 95%;
+      }
+      @include responsive(mobile) {
+        width: 75%;
+        height: 25rem;
+        margin-bottom: 2rem;
+      }
     }
     &__card {
       margin-top: 3.2rem;
       margin-left: 2.8rem;
       width: 260px;
       height: 326px;
+      @include responsive(desktop) {
+        width: 100%;
+      }
     }
     &-card {
       &__box {
@@ -92,12 +185,22 @@
         height: 6em;
         text-align: center;
         padding-top: 1.2rem;
+        @include responsive(mobile) {
+          width: 31px;
+          height: 31px;
+        }
+
         &--1 {
           background-color: #fbd289;
           img {
             width: 4.5rem;
             height: 4.5rem;
             margin-top: -0.5rem;
+            @include responsive(mobile) {
+              width: 25px;
+              height: 25px;
+              margin-top: -0.8rem;
+            }
           }
         }
         &--2 {
@@ -106,42 +209,77 @@
             margin-top: -0.7rem;
             width: 5rem;
             height: 5rem;
+            @include responsive(mobile) {
+              width: 25px;
+              height: 25px;
+              margin-top: -0.8rem;
+            }
           }
         }
         &--3 {
           background-color: #ff6c8f;
           img {
             margin-top: -0.1rem;
+            @include responsive(mobile) {
+              width: 25px;
+              height: 25px;
+              margin-top: -0.8rem;
+            }
           }
         }
         &--4 {
           background-color: #00cc82;
           img {
             margin-top: -0.1rem;
+            @include responsive(mobile) {
+              width: 22px;
+              height: 22px;
+              margin-top: -0.8rem;
+            }
           }
         }
         &--5 {
           background-color: #27aaf0;
           img {
             margin-top: -0.1rem;
+            @include responsive(mobile) {
+              width: 20px;
+              height: 20px;
+              margin-top: -0.5rem;
+            }
           }
         }
         &--6 {
           background-color: #ff6b4e;
           img {
             margin-top: -0.5rem;
+            @include responsive(mobile) {
+              width: 20px;
+              height: 20px;
+              margin-top: -0.8rem;
+            }
           }
         }
         &--7 {
           background-color: #a66dff;
           img {
             margin-top: -0.2rem;
+            @include responsive(mobile) {
+              width: 20px;
+              height: 25px;
+              margin-top: -0.8rem;
+            }
           }
         }
         &--8 {
           background-color: #fbd289;
           img {
             margin-top: -0.5rem;
+            @include responsive(mobile) {
+              width: 22px;
+              height: 22px;
+              margin-top: -0.8rem;
+            }
           }
         }
       }
@@ -155,6 +293,12 @@
         color: #fff;
         margin-bottom: 5px;
         margin-top: 1rem;
+        @include responsive(desktop) {
+          font-size: 16px;
+        }
+        @include responsive(mobile) {
+          font-size: 14px;
+        }
       }
       &__text {
         font-style: normal;
@@ -165,7 +309,16 @@
         align-items: flex-end;
         color: #ffffff;
         margin-bottom: 80px;
-        width: 89%;
+        width: 86%;
+        @include responsive(desktop) {
+          font-size: 13px;
+          width: 70%;
+        }
+        @include responsive(mobile) {
+          font-size: 7px;
+          line-height: 10px;
+          margin-bottom: 10px;
+        }
       }
       &__btn {
         position: absolute;
@@ -182,6 +335,9 @@
         border: transparent;
         border-radius: 1.2rem;
         cursor: pointer;
+        @include responsive(mobile) {
+          border-radius: 0.5rem;
+        }
         &-span {
           margin-left: 5px;
         }
@@ -217,6 +373,9 @@
     justify-content: center;
     align-items: center;
     margin-top: -5rem;
+    @include responsive(mobile) {
+      margin-top: -3rem;
+    }
     &__btn {
       cursor: pointer;
       padding: 0;
@@ -231,6 +390,12 @@
       width: 20rem;
       color: #fff;
       border-radius: 1rem;
+      @include responsive(mobile) {
+        width: 130px;
+        height: 35px;
+        font-size: 1.1rem;
+        padding: 0.7rem;
+      }
     }
   }
 }

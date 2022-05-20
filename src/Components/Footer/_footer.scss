@@ -4,10 +4,30 @@
       @content;
     }
   }
+  @if $breakpoint==desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==big {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  }
 }
 .footer__box {
-  width: 1460px;
+  width: 1349px;
   margin: 0 auto;
+  @include responsive(desktop) {
+    width: 1460px;
+  }
+  @include responsive(big) {
+    width: 100%;
+  }
+  @include responsive(mobile) {
+    width: 393px;
+    height: auto;
+  }
 }
 .footer {
   &__head {
@@ -18,22 +38,42 @@
     margin: 10rem auto;
     margin-bottom: 5rem;
 
+    @include responsive(mobile) {
+      margin: 4rem auto;
+    }
     &--img {
       &--1 {
         position: absolute;
         z-index: 2;
         left: 40%;
+
+        @include responsive(mobile) {
+          width: 63px;
+          height: 57px;
+          left: 32%;
+        }
       }
       &--2 {
         z-index: 3;
         position: absolute;
         left: 44%;
         top: -8rem;
+        @include responsive(mobile) {
+          width: 63px;
+          height: 57px;
+          left: 40%;
+          top: -4.5rem;
+        }
       }
       &--3 {
         position: absolute;
         z-index: 2;
         left: 50%;
+        @include responsive(mobile) {
+          width: 63px;
+          height: 57px;
+          left: 48%;
+        }
       }
     }
   }
@@ -42,10 +82,23 @@
     &--title {
       font-size: 2.5rem;
       margin: 1rem;
+      @include responsive(big) {
+        font-size: 1.8rem;
+      }
+      @include responsive(mobile) {
+        font-size: 13px;
+      }
     }
     &--parag {
       font-size: 1.8rem;
       margin-bottom: 5rem;
+      @include responsive(big) {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+      @include responsive(mobile) {
+        font-size: 11px;
+      }
     }
   }
 }

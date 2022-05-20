@@ -9,7 +9,8 @@ import { Fade } from "react-reveal";
 function About() {
   const [shower, setShower] = useState(false);
   return (
-    <section className="about">
+  <div className="about__box">
+      <section className="about">
       <h2 className="about__title">Hurmatli biznes egasi...</h2>
       <div className="about__parag">
         Bugun biznesni boshqarish, uni yangi bosqichlarga olib chiqish har
@@ -58,6 +59,7 @@ function About() {
         <img className="img--4" src={star} alt="" />
       </div>
     </section>
+  </div>
   );
 }
 

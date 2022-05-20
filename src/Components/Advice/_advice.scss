@@ -4,12 +4,28 @@
       @content;
     }
   }
+  @if $breakpoint==desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==big {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  }
 }
 .advice__box {
-  width: 1460px;
+  width: 1349px;
   margin: 0 auto;
+  @include responsive(desktop) {
+    width: 1460px;
+  }
+  @include responsive(big) {
+    width: 100%;
+  }
   @include responsive(mobile) {
-    width: 392px;
+    width: 376px;
   }
 }
 .advice {
@@ -19,22 +35,38 @@
   padding-bottom: 4rem;
   width: 1139px;
   margin: 0 auto;
+  @include responsive(big) {
+    width: 100%;
+  }
   @include responsive(mobile) {
     flex-direction: column;
+    width: 392px;
   }
   &__left {
     position: relative;
     padding-left: 4.2rem;
-
+    @include responsive(big) {
+      padding-left: 3rem;
+    }
+    @include responsive(mobile) {
+      padding-left: 0;
+    }
     &--title {
       width: 642px;
       margin-top: 64px;
       font-size: 35px;
       line-height: 52px;
       letter-spacing: 0.1rem;
+      @include responsive(big) {
+        font-size: 28px;
+        line-height: 40px;
+      }
       @include responsive(mobile) {
         display: block;
-        margin: 3rem auto;
+        margin: 1rem auto;
+        font-size: 16px;
+        line-height: 24px;
+        width: 332px;
       }
     }
     &--parag {
@@ -46,9 +78,17 @@
         margin: 2rem 0;
         font-size: 25px;
         line-height: 37px;
+        @include responsive(big) {
+          font-size: 20px;
+          line-height: 24px;
+        }
         @include responsive(mobile) {
           display: block;
-          margin: 3rem auto;
+          margin: 0 auto;
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 16px;
+          width: 332px;
         }
       }
     }
@@ -56,6 +96,9 @@
       @include responsive(mobile) {
         display: block;
         margin: 3rem auto;
+        @include responsive(mobile) {
+          margin: 1rem auto;
+        }
       }
       button {
         margin-top: 3rem;
@@ -76,6 +119,8 @@
           height: 22px;
           border-radius: 0.4rem;
           font-size: 0.7rem;
+          margin-left: 2.7rem;
+          margin-top: 1rem;
         }
       }
     }
@@ -83,24 +128,38 @@
       position: absolute;
       height: 62px;
       width: 62px;
-      right: -40px;
+      left: -40px;
       top: 180px;
       transform: rotate(15deg);
+      @include responsive(big) {
+        height: 30px;
+        width: 30px;
+        left: 0;
+      }
       @include responsive(mobile) {
-        top: 80px;
-        right: 5rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        top: 115px;
+        left: 35rem;
       }
     }
     &--img--2 {
       position: absolute;
       height: 57px;
       width: 57px;
-      right: 540px;
+      left: 470px;
       top: 300px;
       transform: rotate(15deg);
+      @include responsive(big) {
+        height: 30px;
+        width: 30px;
+        top: 240px;
+      }
       @include responsive(mobile) {
-        top: 480px;
-        left: 200px;
+        width: 2.2rem;
+        height: 2.2rem;
+        top: 120px;
+        left: 0.5rem;
       }
     }
   }
@@ -110,30 +169,36 @@
       margin-top: 139px;
       width: 469px;
       height: 471px;
-      left: 862px;
+      right: 862px;
+      @include responsive(big) {
+        height: 400px;
+        width: 380px;
+      }
       @include responsive(mobile) {
         display: block;
         margin: 0 auto;
-        margin-top: 39px;
-        width: 288px;
-        height: 289px;
+        width: 208px;
+        height: 209px;
       }
     }
     &--card {
       opacity: 1;
-      right: 140px;
+      right: 40%;
       position: absolute;
-      top: 550px;
-      width: 366px;
-      height: 166px;
+      bottom: 25%;
+      width: 336px;
+      height: 136px;
       display: grid;
       background-color: #fff;
       grid-template-columns: repeat(2, 1fr);
       box-shadow: -7.5px -10.6px 32.9px rgba(0, 7, 5, 0.15);
       border-radius: 0.8rem;
+      @include responsive(big) {
+        bottom: 16%;
+      }
       @include responsive(mobile) {
-        top: 300px;
-        right: 600px;
+        top: 170px;
+        right: 190px;
         width: 147px;
         height: 54px;
       }
@@ -171,7 +236,7 @@
         }
       }
       &--right {
-        padding-top: 4.6rem;
+        padding-top: 4rem;
         @include responsive(mobile) {
           padding: 1.8rem;
         }
@@ -194,8 +259,9 @@
         position: absolute;
         height: 1.5rem;
         width: 1.5rem;
-        bottom: 12%;
+        bottom: 28%;
         right: 5%;
+
         @include responsive(mobile) {
           height: 1rem;
           width: 1rem;
@@ -205,11 +271,12 @@
         position: absolute;
         height: 1.5rem;
         width: 1.5rem;
-        bottom: 12%;
+        bottom: 28%;
         right: 60%;
         @include responsive(mobile) {
           height: 1rem;
           width: 1rem;
+          display: none;
         }
       }
     }
@@ -217,15 +284,17 @@
       position: absolute;
       height: 179px;
       width: 170px;
-      left: 370px;
+      right: 37px;
       top: 60px;
       transform: rotate(15deg);
       z-index: -222;
+      @include responsive(big) {
+      }
       @include responsive(mobile) {
-        height: 122px;
-        width: 125px;
-        left: 64rem;
-        top: -20px;
+        width: 122px;
+        height: 125px;
+        left: 23rem;
+        top: -60px;
       }
     }
     &--img--2 {
@@ -247,9 +316,21 @@
   margin: 1rem auto;
   width: 100%;
   margin-left: 30rem;
+  @include responsive(mobile) {
+    margin-left: 2rem;
+  }
   p {
     margin: 2rem 0;
     font-size: 1.9rem;
     line-height: 1.4;
+
+    @include responsive(mobile) {
+      display: block;
+      margin: 0 auto;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 18px;
+      width: 312px;
+    }
   }
 }

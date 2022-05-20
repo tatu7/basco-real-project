@@ -4,10 +4,31 @@
       @content;
     }
   }
+  @if $breakpoint==desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoint==big {
+    @media (max-width: 1260px) {
+      @content;
+    }
+  }
 }
 .questions__box {
-  width: 1460px;
+  width: 1349px;
   margin: 0 auto;
+  @include responsive(desktop) {
+    width: 1460px;
+  }
+  @include responsive(big) {
+    width: 100%;
+  }
+
+  @include responsive(mobile) {
+    width: 393px;
+    height: auto;
+  }
 }
 .questions {
   display: grid;
@@ -20,15 +41,31 @@
   height: auto;
   padding: 5rem 0;
   margin-bottom: 5rem;
-
+  @include responsive(big) {
+    width: 90%;
+  }
+  @include responsive(mobile) {
+    width: 332px;
+    padding: 2rem 0;
+    margin-bottom: 1.3rem;
+  }
   &__subject {
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    line-height: 60px;
+    line-height: a60px;
     color: #191919;
     margin: 0 auto;
     margin-bottom: 30px;
+    @include responsive(big) {
+      font-size: 2.4rem;
+    }
+    @include responsive(mobile) {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
   }
 }
 .question {
@@ -36,10 +73,20 @@
   background: rgba(0, 0, 0, 0.0001);
   padding-bottom: 30px;
   border-bottom: 1px solid #3a3a3a;
+  @include responsive(big) {
+    margin-top: 2rem;
+  }
+  @include responsive(mobile) {
+    width: 70%;
+    display: block;
+    margin: 2rem auto;
+    padding-bottom: 0px;
+  }
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
   }
   &__subject {
     font-style: normal;
@@ -49,12 +96,29 @@
     text-align: start;
     letter-spacing: -1px;
     color: #191919;
+    @include responsive(big) {
+      font-size: 2.4rem;
+    }
+    @include responsive(mobile) {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 20px;
+      width: 92%;
+    }
   }
   &__btn {
     border: transparent;
     height: 40px;
     width: 40px;
     background-color: transparent;
+    @include responsive(mobile) {
+      width: 5px;
+      height: 5px;
+      margin-top: 6rem;
+      position: absolute;
+      right: 2rem;
+      bottom: 2.5rem;
+    }
   }
   &__text {
     font-style: normal;
@@ -64,5 +128,14 @@
     text-align: start;
     color: #5d5d5d;
     width: 75rem;
+    @include responsive(big) {
+      font-size: 1.6rem;
+    }
+    @include responsive(mobile) {
+      font-weight: 400;
+      font-size: 8px;
+      line-height: 12px;
+      width: 232px;
+    }
   }
 }
