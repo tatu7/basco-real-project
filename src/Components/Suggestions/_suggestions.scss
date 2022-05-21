@@ -16,7 +16,8 @@
   }
 }
 .suggestions__box {
-  width: 1349px;
+  display: block;
+  width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
     width: 1460px;
@@ -82,13 +83,17 @@
       list-style-type: none;
       grid-template-columns: repeat(3, 1fr);
       @include responsive(big) {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
       @include responsive(mobile) {
         grid-template-columns: repeat(1, 1fr);
       }
     }
     &-card {
+      @include responsive(big) {
+        margin-bottom: 3rem;
+        width: 90%;
+      }
       &__img {
         display: block;
         margin: 0 auto;

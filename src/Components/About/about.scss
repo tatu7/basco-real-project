@@ -26,7 +26,7 @@
   }
 }
 .about__box {
-  width: 1349px;
+  width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
     width: 1460px;
@@ -63,6 +63,7 @@
     @include responsive(toqqiz) {
       font-size: 29px;
       margin: 2rem 0;
+      margin-top: 4rem;
     }
     @include responsive(toqqiz) {
       font-size: 20px;

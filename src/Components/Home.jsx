@@ -14,16 +14,16 @@ import Slider from "react-slick";
 function Home() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <About /> */}
-      {/* <Card /> */}
-      {/* <Advice /> */}
-      {/* <Statistics /> */}
-      {/* <Platform /> */}
-      {/* <Directions /> */}
-      {/* <Suggestions /> */}
-      {/* <Questions /> */}
-      {/* <Footer /> */}
+      <Header />
+      <About />
+      <Card />
+      <Advice />
+      <Statistics />
+      <Platform />
+      <Directions />
+      <Suggestions />
+      <Questions />
+      <Footer />
     </>
   );
 }

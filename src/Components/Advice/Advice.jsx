@@ -49,7 +49,7 @@ function Advice() {
             </div>
           )}
           <img className="advice__left--img--1" src={star} alt="" />
-          <img className="advice__left--img--2" src={plus} alt="" />
+          {/* <img className="advice__left--img--2" src={plus} alt="" /> */}
           {shower ? (
             <Fade top>
               <div className="hide__parag">
@@ -118,7 +118,7 @@ function Advice() {
             <img className="advice__right--card--img--2" src={sariq} alt="" />
           </div>
           <img className="advice__right--img--1" src={halqa} alt="" />
-          <img className="advice__right--img--2" src={aylana} alt="" />
+          {/* <img className="advice__right--img--2" src={aylana} alt="" /> */}
         </div>
       </section>
     </div>

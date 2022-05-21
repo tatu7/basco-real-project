@@ -26,12 +26,12 @@
   }
 }
 .header__box {
-  max-width: 1349px;
+  width: 100%;
   display: block;
   margin: 0 auto;
-  height: 957px;
+  // height: 957px;
   @include responsive(desktop) {
-    width: 1460px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
   }

@@ -24,13 +24,18 @@
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  width: 1349px;
+  width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
-    width: 1460px;
+    width: 100%;
   }
   @include responsive(big) {
+    width: 100%;
+  }
+  @include responsive(toqqiz) {
     width: 90%;
+    display: flex;
+    flex-direction: column;
   }
 
   @include responsive(mobile) {
@@ -47,10 +52,11 @@
       margin-left: 70px;
     }
     @include responsive(toqqiz) {
-      margin-left: 20px;
+      margin-left: 0px;
+      margin-top: 2rem;
     }
     @include responsive(mobile) {
-      margin-left: 0;
+      margin-left: 2rem;
       margin-top: 10px;
     }
     &--title {
@@ -62,10 +68,12 @@
       width: 550px;
       @include responsive(big) {
         font-size: 2.4rem;
-        width: 300px;
+        width: 100%;
       }
       @include responsive(toqqiz) {
         font-size: 1.9rem;
+        margin-bottom: 2rem;
+        width: 100%;
       }
       @include responsive(mobile) {
         display: block;
@@ -86,12 +94,13 @@
         line-height: 1.4;
         width: 590px;
         @include responsive(big) {
-          width: 400px;
+          width: 100%;
           font-size: 1.6rem;
           margin: 0;
         }
         @include responsive(toqqiz) {
           font-size: 1.4rem;
+          width: 100%;
         }
         @include responsive(mobile) {
           font-size: 11px;
@@ -103,6 +112,9 @@
       margin-bottom: 103px;
       @include responsive(toqqiz) {
         margin-top: 2rem;
+      }
+      @include responsive(toqqiz) {
+        margin-bottom: 1rem;
       }
       @include responsive(mobile) {
         margin-bottom: 1rem;
@@ -122,6 +134,7 @@
           height: 3.4rem;
           border-radius: 0.8rem;
         }
+
         @include responsive(mobile) {
           width: 79px;
           height: 22px;
@@ -140,6 +153,11 @@
       @include responsive(big) {
         width: 2rem;
         height: 2rem;
+      }
+      @include responsive(toqqiz) {
+        width: 2rem;
+        height: 2rem;
+        right: 2rem;
       }
 
       @include responsive(mobile) {
@@ -165,12 +183,13 @@
       @include responsive(mobile) {
         width: 20.47px;
         height: 20.47px;
+        left: 2px;
+        display: none;
       }
     }
   }
   &__right {
     position: relative;
-
     &--img--1 {
       position: absolute;
       height: 261px;
@@ -180,13 +199,19 @@
       @include responsive(big) {
         height: 200px;
         width: 350px;
+        right: 120px;
       }
       @include responsive(toqqiz) {
-        height: 150px;
-        width: 240px;
-        right: 110px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+        width: 300px;
+        right: 0;
+        top: -20px;
       }
       @include responsive(mobile) {
+        position: absolute;
         width: 200px;
         height: 120px;
         right: 125px;
@@ -202,13 +227,21 @@
       @include responsive(big) {
         height: 200px;
         width: 350px;
+        top: 300px;
+        right: 40px;
       }
       @include responsive(toqqiz) {
-        height: 150px;
-        width: 240px;
-        top: 260px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+        right: 0;
+        width: 300px;
+        top: -20px;
+        left: 10px;
       }
       @include responsive(mobile) {
+        position: absolute;
         width: 193px;
         height: 107px;
         top: 120px;
@@ -224,13 +257,22 @@
       @include responsive(big) {
         height: 284px;
         width: 308px;
+        top: 160px;
+        right: 40px;
       }
       @include responsive(toqqiz) {
-        height: 150px;
-        width: 200px;
-        top: 190px;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        height: 160px;
+
+        width: 260px;
+        right: 0;
+        top: -300px;
+        left: 70px;
       }
       @include responsive(mobile) {
+        position: absolute;
         width: 182px;
         height: 186px;
         top: 30px;
@@ -244,6 +286,13 @@
       right: 91px;
       top: 50px;
       transform: rotate(20deg);
+
+      @include responsive(toqqiz) {
+        width: 20.47px;
+        height: 20.47px;
+        // display: none;
+        right: 61px;
+      }
 
       @include responsive(mobile) {
         width: 20.47px;
@@ -259,13 +308,21 @@
       bottom: 50px;
       right: 190px;
       transform: rotate(20deg);
-      @include responsive(mobile) {
+      @include responsive(toqqiz) {
         width: 2.4rem;
         height: 2.47rem;
         bottom: 0;
         top: 17rem;
         right: 4px;
         left: 6rem;
+      }
+      @include responsive(mobile) {
+        width: 2.4rem;
+        height: 2.47rem;
+        bottom: 0;
+        top: 17rem;
+        right: 0px;
+        left: 0rem;
       }
     }
     ///////////////////////
@@ -276,10 +333,17 @@
       width: 14.2rem;
       top: 260px;
       right: 52px;
-      @include responsive(toqqiz) {
-        height: 80px;
-        width: 80px;
+      @include responsive(big) {
+        height: 120px;
+        width: 140px;
         top: 210px;
+        right: 10px;
+      }
+      @include responsive(toqqiz) {
+        height: 100px;
+        width: 100px;
+        top: 140px;
+        right: 20px;
       }
       @include responsive(mobile) {
         width: 104px;
@@ -295,7 +359,12 @@
       width: 4.2rem;
       top: 330px;
       left: 45px;
+
+      @include responsive(big) {
+        display: none;
+      }
       @include responsive(mobile) {
+        display: block;
         width: 20.47px;
         height: 20.47px;
         top: 100px;
@@ -316,9 +385,13 @@
       top: 623px;
       right: 258px;
       cursor: pointer;
-      @include responsive(toqqiz) {
-        top: 380px;
+      @include responsive(big) {
+        top: 480px;
         right: 200px;
+      }
+      @include responsive(toqqiz) {
+        top: 350px;
+        right: 180px;
       }
       @include responsive(mobile) {
         right: 0;
@@ -348,4 +421,13 @@
 }
 .platform__modal {
   margin-left: -12rem;
+}
+.hide__parag {
+  @include responsive(desktop) {
+    margin-left: 7rem;
+  }
+  @include responsive(toqqiz) {
+    width: 90%;
+    margin-left: 2rem;
+  }
 }

@@ -14,15 +14,20 @@
       @content;
     }
   }
+  @if $breakpoint==sakkiz {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
 }
 .questions__box {
-  width: 1349px;
+  width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
     width: 1460px;
   }
   @include responsive(big) {
-    width: 100%;
+    width: 90%;
   }
 
   @include responsive(mobile) {
@@ -60,6 +65,10 @@
     @include responsive(big) {
       font-size: 2.4rem;
     }
+    @include responsive(sakkiz) {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
     @include responsive(mobile) {
       font-weight: 700;
       font-size: 16px;
@@ -75,6 +84,9 @@
   border-bottom: 1px solid #3a3a3a;
   @include responsive(big) {
     margin-top: 2rem;
+  }
+  @include responsive(sakkiz) {
+    margin-top: 1rem;
   }
   @include responsive(mobile) {
     width: 70%;
@@ -99,6 +111,9 @@
     @include responsive(big) {
       font-size: 2.4rem;
     }
+    @include responsive(sakkiz) {
+      font-size: 2rem;
+    }
     @include responsive(mobile) {
       font-weight: 500;
       font-size: 11px;
@@ -111,6 +126,10 @@
     height: 40px;
     width: 40px;
     background-color: transparent;
+    @include responsive(sakkiz) {
+      width: 25px;
+      height: 25px;
+    }
     @include responsive(mobile) {
       width: 5px;
       height: 5px;
@@ -118,6 +137,12 @@
       position: absolute;
       right: 2rem;
       bottom: 2.5rem;
+    }
+    svg {
+      @include responsive(sakkiz) {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
   &__text {
@@ -130,6 +155,10 @@
     width: 75rem;
     @include responsive(big) {
       font-size: 1.6rem;
+      width: 80%;
+    }
+    @include responsive(sakkiz) {
+      font-size: 1.4rem;
     }
     @include responsive(mobile) {
       font-weight: 400;

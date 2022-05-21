@@ -14,9 +14,19 @@
       @content;
     }
   }
+  @if $breakpoint==toqqiz {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint==yetti {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
 }
 .advice__box {
-  width: 1349px;
+  width: 100%;
   margin: 0 auto;
   @include responsive(desktop) {
     width: 1460px;
@@ -36,7 +46,7 @@
   width: 1139px;
   margin: 0 auto;
   @include responsive(big) {
-    width: 100%;
+    width: 90%;
   }
   @include responsive(mobile) {
     flex-direction: column;
@@ -46,7 +56,7 @@
     position: relative;
     padding-left: 4.2rem;
     @include responsive(big) {
-      padding-left: 3rem;
+      padding-left: 0rem;
     }
     @include responsive(mobile) {
       padding-left: 0;
@@ -58,8 +68,19 @@
       line-height: 52px;
       letter-spacing: 0.1rem;
       @include responsive(big) {
-        font-size: 28px;
-        line-height: 40px;
+        font-size: 24px;
+        margin-top: 20px;
+        line-height: 28px;
+        width: 440px;
+      }
+      @include responsive(toqqiz) {
+        font-size: 18px;
+        line-height: 18px;
+      }
+      @include responsive(yetti) {
+        font-size: 14px;
+        line-height: 18px;
+        width: 300px;
       }
       @include responsive(mobile) {
         display: block;
@@ -79,8 +100,16 @@
         font-size: 25px;
         line-height: 37px;
         @include responsive(big) {
-          font-size: 20px;
+          font-size: 18px;
           line-height: 24px;
+          width: 400px;
+          margin-bottom: -17px;
+        }
+        @include responsive(toqqiz) {
+          font-size: 14px;
+        }
+        @include responsive(yetti) {
+          width: 300px;
         }
         @include responsive(mobile) {
           display: block;
@@ -93,9 +122,12 @@
       }
     }
     &--button {
-      @include responsive(mobile) {
+      @include responsive(big) {
         display: block;
         margin: 3rem auto;
+        @include responsive(toqqiz) {
+          margin: 2rem auto;
+        }
         @include responsive(mobile) {
           margin: 1rem auto;
         }
@@ -134,7 +166,11 @@
       @include responsive(big) {
         height: 30px;
         width: 30px;
-        left: 0;
+        left: -3rem;
+      }
+      @include responsive(toqqiz) {
+        height: 30px;
+        width: 30px;
       }
       @include responsive(mobile) {
         width: 2.4rem;
@@ -171,14 +207,28 @@
       height: 471px;
       right: 862px;
       @include responsive(big) {
-        height: 400px;
+        height: 380px;
         width: 380px;
       }
+      @include responsive(toqqiz) {
+        position: absolute;
+        right: 1rem;
+        width: 270px;
+        height: 300px;
+        margin-top: 6rem;
+      }
       @include responsive(mobile) {
+        position: relative;
         display: block;
         margin: 0 auto;
         width: 208px;
         height: 209px;
+      }
+      &--2 {
+        @include responsive(toqqiz) {
+          width: 20rem;
+          height: 2rem;
+        }
       }
     }
     &--card {
@@ -194,10 +244,17 @@
       box-shadow: -7.5px -10.6px 32.9px rgba(0, 7, 5, 0.15);
       border-radius: 0.8rem;
       @include responsive(big) {
-        bottom: 16%;
+        top: 80%;
+        right: 250px;
+        width: 147px;
+        height: 54px;
       }
+      @include responsive(toqqiz) {
+        top: 330px;
+      }
+
       @include responsive(mobile) {
-        top: 170px;
+        top: 190px;
         right: 190px;
         width: 147px;
         height: 54px;
@@ -205,6 +262,10 @@
       &--left {
         padding-left: 28px;
         padding-top: 1.8rem;
+        @include responsive(big) {
+          padding-top: 1rem;
+          padding-left: 15px;
+        }
         @include responsive(mobile) {
           padding-top: 1rem;
           padding-left: 15px;
@@ -213,6 +274,9 @@
           font-size: 1.5rem;
           font-weight: 700;
           color: black;
+          @include responsive(big) {
+            font-size: 6px;
+          }
           @include responsive(mobile) {
             font-size: 6px;
           }
@@ -221,6 +285,10 @@
           font-size: 3.9rem;
           font-weight: 700;
           margin-top: 1px;
+          @include responsive(big) {
+            font-size: 16px;
+            margin-top: 0;
+          }
           @include responsive(mobile) {
             font-size: 16px;
             margin-top: 0;
@@ -229,6 +297,10 @@
         &--description {
           margin-top: 0.1rem;
           font-size: 1.4rem;
+          @include responsive(big) {
+            font-size: 6px;
+            margin: 0;
+          }
           @include responsive(mobile) {
             font-size: 6px;
             margin: 0;
@@ -237,12 +309,18 @@
       }
       &--right {
         padding-top: 4rem;
+        @include responsive(big) {
+          padding: 1.8rem;
+        }
         @include responsive(mobile) {
           padding: 1.8rem;
         }
         &--number {
           font-size: 3.9rem;
           font-weight: 800;
+          @include responsive(big) {
+            font-size: 16px;
+          }
           @include responsive(mobile) {
             font-size: 16px;
           }
@@ -250,6 +328,9 @@
         &--description {
           margin-top: 0.1rem;
           font-size: 1.4rem;
+          @include responsive(big) {
+            font-size: 6px;
+          }
           @include responsive(mobile) {
             font-size: 6px;
           }
@@ -261,6 +342,10 @@
         width: 1.5rem;
         bottom: 28%;
         right: 5%;
+        @include responsive(big) {
+          height: 1rem;
+          width: 1rem;
+        }
 
         @include responsive(mobile) {
           height: 1rem;
@@ -273,6 +358,10 @@
         width: 1.5rem;
         bottom: 28%;
         right: 60%;
+        @include responsive(big) {
+          height: 1rem;
+          width: 1rem;
+        }
         @include responsive(mobile) {
           height: 1rem;
           width: 1rem;
@@ -281,14 +370,20 @@
       }
     }
     &--img--1 {
+      display: none;
       position: absolute;
       height: 179px;
       width: 170px;
-      right: 37px;
+      right: -57px;
       top: 60px;
       transform: rotate(15deg);
       z-index: -222;
+
       @include responsive(big) {
+        width: 122px;
+        height: 125px;
+        left: 3rem;
+        top: 60px;
       }
       @include responsive(mobile) {
         width: 122px;
@@ -316,6 +411,10 @@
   margin: 1rem auto;
   width: 100%;
   margin-left: 30rem;
+
+  @include responsive(big) {
+    margin-left: 2rem;
+  }
   @include responsive(mobile) {
     margin-left: 2rem;
   }
@@ -323,7 +422,9 @@
     margin: 2rem 0;
     font-size: 1.9rem;
     line-height: 1.4;
-
+    @include responsive(big) {
+      font-size: 1.4rem;
+    }
     @include responsive(mobile) {
       display: block;
       margin: 0 auto;
