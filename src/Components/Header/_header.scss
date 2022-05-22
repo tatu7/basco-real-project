@@ -1,6 +1,6 @@
 @mixin responsive($breakpoint) {
   @if $breakpoint==mobile {
-    @media (max-width: 392px) {
+    @media (max-width: 600px) {
       @content;
     }
   }
@@ -20,7 +20,12 @@
     }
   }
   @if $breakpoint==yettiyuz {
-    @media (max-width: 700px) {
+    @media (max-width: 790px) {
+      @content;
+    }
+  }
+  @if $breakpoint==uch {
+    @media (max-width: 390px) {
       @content;
     }
   }
@@ -40,7 +45,7 @@
   }
 
   @include responsive(mobile) {
-    width: 393px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
   }
@@ -61,8 +66,12 @@
     height: 450px;
   }
   @include responsive(mobile) {
-    width: 393px;
+    width: 100%;
     height: 715px;
+  }
+  @include responsive(mobile) {
+    width: 100%;
+    height: 615px;
   }
 }
 .header__nav {
@@ -120,6 +129,12 @@
         margin-left: 37px;
         top: 0;
       }
+      @include responsive(uch) {
+        height: 91px;
+        width: 91px;
+        margin-left: 10px;
+        top: 0;
+      }
     }
   }
 }
@@ -133,6 +148,9 @@
     position: relative;
     @include responsive(mobile) {
       margin-left: 42px;
+    }
+    @include responsive(uch) {
+      margin-left: 22px;
     }
     &--parag--1 {
       z-index: 200;
@@ -157,11 +175,18 @@
         width: 300px;
       }
       @include responsive(mobile) {
-        font-size: 18px;
-        width: 350px;
+        font-size: 20px;
+        width: 90%;
         margin-left: 0.2rem;
         letter-spacing: 0px;
         margin-top: 2rem;
+      }
+      @include responsive(uch) {
+        font-size: 13px;
+        width: 90%;
+        margin-left: 0rem;
+        letter-spacing: 0px;
+        margin-top: 0rem;
       }
     }
     &--parag--2 {
@@ -188,12 +213,20 @@
         margin-top: 30px;
       }
       @include responsive(mobile) {
+        font-size: 14px;
+        margin: 0;
+        width: 80%;
+        margin-left: 10px;
+        margin-top: 2rem;
+        line-height: 15px;
+      }
+      @include responsive(uch) {
         font-size: 10px;
         margin: 0;
-        width: 270px;
-        margin-left: 40px;
-        margin-top: 4rem;
-        line-height: 15px;
+        width: 80%;
+        margin-left: 4px;
+        margin-top: 1rem;
+        line-height: 10px;
       }
     }
     &--buttons {
@@ -237,6 +270,12 @@
           width: 10rem;
           font-size: 0.7rem;
         }
+        @include responsive(mobile) {
+          margin-left: 1px;
+          margin-top: 22px;
+          width: 9rem;
+          font-size: 0.7rem;
+        }
       }
       &--2 {
         font-weight: 900;
@@ -259,6 +298,12 @@
           margin-top: 32px;
           width: 10rem;
           font-size: 1.1rem;
+        }
+        @include responsive(mobile) {
+          margin-left: 25px;
+          margin-top: 22px;
+          width: 1rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -283,6 +328,12 @@
       left: 140px;
       top: 50%;
     }
+    @include responsive(uch) {
+      height: 253px;
+      width: 221px;
+      left: 60px;
+      top: 37%;
+    }
   }
   &-2 {
     position: absolute;
@@ -298,6 +349,9 @@
       top: 340px;
       height: 120px;
       width: 120px;
+    }
+    @include responsive(uch) {
+      display: none;
     }
   }
   &-3 {
@@ -320,6 +374,12 @@
       height: 207px;
       width: 263px;
     }
+    @include responsive(uch) {
+      left: -22px;
+      top: 220px;
+      height: 167px;
+      width: 203px;
+    }
   }
   &-4 {
     position: absolute;
@@ -339,6 +399,10 @@
       top: 440px;
       height: 187px;
       width: 183px;
+    }
+    @include responsive(uch) {
+      left: -22px;
+      top: 420px;
     }
   }
   &-6 {
@@ -401,6 +465,10 @@
       height: 120px;
       width: 120px;
     }
+    @include responsive(uch) {
+      height: 100px;
+      width: 100px;
+    }
   }
   &-10 {
     position: absolute;
@@ -420,7 +488,7 @@
       height: 19rem;
       width: 19rem;
       opacity: 0.5;
-      // z-index: -20;
+      z-index: -20;
     }
   }
   &-11 {
@@ -438,6 +506,7 @@
       height: 5rem;
     }
     @include responsive(yettiyuz) {
+      display: none;
       top: 40%;
       left: 2%;
       height: 3rem;

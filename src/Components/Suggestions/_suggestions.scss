@@ -9,12 +9,28 @@
       @content;
     }
   }
+  @if $breakpoint==toqqiz {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
   @if $breakpoint==big {
     @media (max-width: 1260px) {
       @content;
     }
   }
+  @if $breakpoint==olti {
+    @media (max-width: 665px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tort {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
 }
+
 .suggestions__box {
   display: block;
   width: 100%;
@@ -26,7 +42,7 @@
     width: 100%;
   }
   @include responsive(mobile) {
-    width: 393px;
+    width: 100%;
     height: auto;
   }
 }
@@ -39,6 +55,7 @@
   padding-bottom: 8rem;
   @include responsive(mobile) {
     padding-bottom: 1rem;
+    width: 100%;
   }
   &-top {
     width: 100%;
@@ -105,7 +122,7 @@
           height: 220px;
         }
         @include responsive(mobile) {
-          width: 243px;
+          width: 90%;
           height: 183px;
         }
       }
@@ -115,7 +132,7 @@
         font-size: 25.0046px;
         color: #e04776;
         text-align: left;
-        padding-left: 3rem;
+        // padding-left: 3rem;
         @include responsive(big) {
           font-size: 16px;
         }
@@ -136,8 +153,6 @@
         line-height: 1.4;
         color: #191919;
         letter-spacing: 0.1rem;
-        text-align: left;
-        padding-left: 3rem;
         @include responsive(big) {
           font-size: 13px;
         }
@@ -154,4 +169,78 @@
       }
     }
   }
+}
+.book {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 400px;
+  margin-bottom: 18rem;
+  @include responsive(toqqiz) {
+    height: 340px;
+    margin-bottom: 0;
+  }
+  @include responsive(tort) {
+    height: 300px;
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 514px;
+    height: 427px;
+    border-radius: 24px;
+    @include responsive(toqqiz) {
+      height: 300px;
+      width: 380px;
+    }
+    @include responsive(tort) {
+      height: 200px;
+      width: 280px;
+      border-radius: 1rem;
+    }
+  }
+  &__body {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    padding: 0.5rem;
+    @include responsive(toqqiz) {
+      width: 400px;
+    }
+    @include responsive(olti) {
+      width: 351px;
+    }
+    @include responsive(tort) {
+      width: 301px;
+    }
+  }
+  &__link {
+    color: #e04776;
+    font-size: 36px;
+    @include responsive(toqqiz) {
+      font-size: 24px;
+    }
+    @include responsive(tort) {
+      font-size: 16px;
+    }
+  }
+  &__parag {
+    width: 100%;
+    font-size: 24px;
+    @include responsive(toqqiz) {
+      font-size: 16px;
+    }
+    @include responsive(tort) {
+      font-size: 13px;
+    }
+  }
+}
+.qora__link {
+  width: 100%;
+  color: #191919;
+  padding-left: 3.5rem;
+}
+.card__bottom {
+  width: 100%;
+  padding: 0 3.4rem;
 }

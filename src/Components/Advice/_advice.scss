@@ -1,6 +1,6 @@
 @mixin responsive($breakpoint) {
   @if $breakpoint==mobile {
-    @media (max-width: 392px) {
+    @media (max-width: 662px) {
       @content;
     }
   }
@@ -20,7 +20,12 @@
     }
   }
   @if $breakpoint==yetti {
-    @media (max-width: 700px) {
+    @media (max-width: 770px) {
+      @content;
+    }
+  }
+  @if $breakpoint==uch {
+    @media (max-width: 360px) {
       @content;
     }
   }
@@ -35,7 +40,7 @@
     width: 100%;
   }
   @include responsive(mobile) {
-    width: 376px;
+    width: 100%;
   }
 }
 .advice {
@@ -50,7 +55,7 @@
   }
   @include responsive(mobile) {
     flex-direction: column;
-    width: 392px;
+    width: 100%;
   }
   &__left {
     position: relative;
@@ -89,6 +94,11 @@
         line-height: 24px;
         width: 332px;
       }
+      @include responsive(uch) {
+        width: 90%;
+        font-size: 14px;
+        line-height: 14px;
+      }
     }
     &--parag {
       &--1,
@@ -119,6 +129,11 @@
           line-height: 16px;
           width: 332px;
         }
+        @include responsive(uch) {
+          font-size: 10px;
+          line-height: 12px;
+          width: 90%;
+        }
       }
     }
     &--button {
@@ -133,6 +148,8 @@
         }
       }
       button {
+        display: block;
+        margin: 3rem auto;
         margin-top: 3rem;
         border: none;
         text-align: center;
@@ -151,7 +168,6 @@
           height: 22px;
           border-radius: 0.4rem;
           font-size: 0.7rem;
-          margin-left: 2.7rem;
           margin-top: 1rem;
         }
       }
@@ -173,6 +189,7 @@
         width: 30px;
       }
       @include responsive(mobile) {
+        display: none;
         width: 2.4rem;
         height: 2.4rem;
         top: 115px;
@@ -233,9 +250,9 @@
     }
     &--card {
       opacity: 1;
-      right: 40%;
+      right: 160px;
       position: absolute;
-      bottom: 25%;
+      top: 540px;
       width: 336px;
       height: 136px;
       display: grid;
@@ -251,11 +268,19 @@
       }
       @include responsive(toqqiz) {
         top: 330px;
+        right: 150px;
       }
 
       @include responsive(mobile) {
         top: 190px;
         right: 190px;
+        width: 147px;
+        height: 54px;
+      }
+      @include responsive(uch) {
+        top: 190px;
+        right: 0;
+        left: 2rem;
         width: 147px;
         height: 54px;
       }
@@ -432,6 +457,11 @@
       font-size: 11px;
       line-height: 18px;
       width: 312px;
+    }
+    @include responsive(uch) {
+      font-size: 10px;
+      line-height: 14px;
+      width: 90%;
     }
   }
 }

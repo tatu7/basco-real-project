@@ -7,7 +7,7 @@ import chart2 from "../../Assets/images/adviceImg-5.png";
 function Statistics() {
   return (
     <section className="statistica">
-      <div className="container statistica__body">
+      <div className=" statistica__body">
         <div className="statistica__left">
           <img className="statistica__left--img--1" src={chart1} alt="" />
           <img className="statistica__left--img--2" src={chart2} alt="" />

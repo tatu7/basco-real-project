@@ -6,6 +6,7 @@ import blog3 from "../../Assets/images/blog13.jpg";
 import video1 from "../../Assets/images/video1.jpg";
 import video2 from "../../Assets/images/video2.jpg";
 import video3 from "../../Assets/images/video3.jpg";
+import book from "../../Assets/images/basco book2.jpg";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Modal from "../../UI/Modal/Modal";
@@ -99,19 +100,21 @@ const Suggestions = () => {
                         className="suggestions-middle-card__img"
                       />
                     </div>
-                    <NavLink
-                      to="/blog1"
-                      style={{ textDecoration: "none" }}
-                      className="suggestions-middle-card__subject"
-                    >
-                      Bunga ishonmagan bo’lardingiz
-                    </NavLink>
+                    <div className="card__bottom">
+                      <p className="suggestions-middle-card__subject">
+                        Bunga ishonmagan bo’lardingiz
+                      </p>
 
-                    <p className="suggestions-middle-card__text">
-                      Birgina avtomatlashtirish orqali biznesingiz
-                      samaradorligini 23% ga oshirib, xarajatlaringizni 29% ga
-                      qisqartirishi mumkin ekan.
-                    </p>
+                      <NavLink
+                        to="/blog1"
+                        style={{ textDecoration: "none" }}
+                        className="suggestions-middle-card__text   "
+                      >
+                        Birgina avtomatlashtirish orqali biznesingiz
+                        samaradorligini 23% ga oshirib, xarajatlaringizni 29% ga
+                        qisqartirishi mumkin ekan.
+                      </NavLink>
+                    </div>
                   </div>
                 </li>
                 <li className="suggestions-middle__item">
@@ -124,18 +127,20 @@ const Suggestions = () => {
                       />
                     </div>
 
-                    <NavLink
-                      to="/blog2"
-                      style={{ textDecoration: "none" }}
-                      className="suggestions-middle-card__subject"
-                    >
-                      ERP platforformasi haqida
-                    </NavLink>
-                    <p className="suggestions-middle-card__text">
-                      Siz eng tez rivojlanib borayotgan ishlab chiqarish
-                      kompaniyalarning sirini fosh qildingiz! Bu - ERP
-                      platformasi.
-                    </p>
+                    <div className="card__bottom">
+                      <p className="suggestions-middle-card__subject">
+                        ERP platforformasi haqida
+                      </p>
+                      <NavLink
+                        to="/blog2"
+                        style={{ textDecoration: "none" }}
+                        className="suggestions-middle-card__text"
+                      >
+                        Siz eng tez rivojlanib borayotgan ishlab chiqarish
+                        kompaniyalarning sirini fosh qildingiz! Bu - ERP
+                        platformasi.
+                      </NavLink>
+                    </div>
                   </div>
                 </li>
                 <li className="suggestions-middle__item">
@@ -147,17 +152,19 @@ const Suggestions = () => {
                         className="suggestions-middle-card__img"
                       />
                     </div>
-                    <NavLink
-                      to="/blog3"
-                      style={{ textDecoration: "none" }}
-                      className="suggestions-middle-card__subject"
-                    >
-                      BASCO ERP platformasi
-                    </NavLink>
-                    <p className="suggestions-middle-card__text">
-                      Basco ERP platformasini kompaniyangizga joriy
-                      qilganingizda hech narsa avvalgidek bo’lmaydi.
-                    </p>
+                    <div className="card__bottom">
+                      <p className="suggestions-middle-card__subject">
+                        BASCO ERP platformasi
+                      </p>
+                      <NavLink
+                        to="/blog3"
+                        style={{ textDecoration: "none" }}
+                        className="suggestions-middle-card__text"
+                      >
+                        Basco ERP platformasini kompaniyangizga joriy
+                        qilganingizda hech narsa avvalgidek bo’lmaydi.
+                      </NavLink>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -165,78 +172,25 @@ const Suggestions = () => {
               ""
             )}
             {clicked === 2 ? (
-              <ul className="suggestions-middle__list">
-                <li className="suggestions-middle__item">
-                  <div className="suggestions-middle__card">
-                    <div className="suggestions-middle-card__box">
-                      <img
-                        src={blog1}
-                        alt="trade"
-                        className="suggestions-middle-card__img"
-                      />
-                    </div>
-                    <NavLink
-                      to="/blog1"
-                      style={{ textDecoration: "none" }}
-                      className="suggestions-middle-card__subject"
-                    >
-                      Bunga ishonmagan bo’lardingiz
-                    </NavLink>
+              <div className="book">
+                <img src={book} alt="trade" className="book__img" />
 
-                    <p className="suggestions-middle-card__text">
-                      Birgina avtomatlashtirish orqali biznesingiz
-                      samaradorligini 23% ga oshirib, xarajatlaringizni 29% ga
-                      qisqartirishi mumkin ekan.
-                    </p>
-                  </div>
-                </li>
-                <li className="suggestions-middle__item">
-                  <div className="suggestions-middle__card">
-                    <div className="suggestions-middle-card__box">
-                      <img
-                        src={blog2}
-                        alt="trade"
-                        className="suggestions-middle-card__img"
-                      />
-                    </div>
+                <div className="book__body">
+                  <NavLink
+                    to="/blog1"
+                    style={{ textDecoration: "none" }}
+                    className="book__link"
+                  >
+                    Bepul yo’riqnoma
+                  </NavLink>
 
-                    <NavLink
-                      to="/blog2"
-                      style={{ textDecoration: "none" }}
-                      className="suggestions-middle-card__subject"
-                    >
-                      ERP platforformasi haqida
-                    </NavLink>
-                    <p className="suggestions-middle-card__text">
-                      Siz eng tez rivojlanib borayotgan ishlab chiqarish
-                      kompaniyalarning sirini fosh qildingiz! Bu - ERP
-                      platformasi.
-                    </p>
-                  </div>
-                </li>
-                <li className="suggestions-middle__item">
-                  <div className="suggestions-middle__card">
-                    <div className="suggestions-middle-card__box">
-                      <img
-                        src={blog3}
-                        alt="trade"
-                        className="suggestions-middle-card__img"
-                      />
-                    </div>
-                    <NavLink
-                      to="/blog3"
-                      style={{ textDecoration: "none" }}
-                      className="suggestions-middle-card__subject"
-                    >
-                      BASCO ERP platformasi
-                    </NavLink>
-                    <p className="suggestions-middle-card__text">
-                      Basco ERP platformasini kompaniyangizga joriy
-                      qilganingizda hech narsa avvalgidek bo’lmaydi.
-                    </p>
-                  </div>
-                </li>
-              </ul>
+                  <p className=" book__parag">
+                    Ishlab chiqarish biznesingizni keyingi 20 kun ichida to’liq
+                    avtomatlashtiring.Bu orqali biznesingiz samaradorligi 23% ga
+                    oshib, xarajatlaringiz 29% ga qisqarishi mumkin
+                  </p>
+                </div>
+              </div>
             ) : (
               ""
             )}
@@ -254,7 +208,7 @@ const Suggestions = () => {
                     <h2
                       style={{ cursor: "pointer" }}
                       onClick={() => setClickVideo1(!clickVideo1)}
-                      className="suggestions-middle-card__subject"
+                      className="suggestions-middle-card__subject  qora__link"
                     >
                       "BASCO" kompaniyasi "BIG DATA" bilan xamkorlikda seminar
                       jarayonlari
@@ -274,7 +228,7 @@ const Suggestions = () => {
                     <h2
                       style={{ cursor: "pointer" }}
                       onClick={() => setClickVideo2(!clickVideo2)}
-                      className="suggestions-middle-card__subject"
+                      className="suggestions-middle-card__subject qora__link"
                     >
                       Ko'p vaqt oladigan va taxminiy hisob-kitoblardan
                       charchadingizmi?
@@ -293,7 +247,7 @@ const Suggestions = () => {
                     <h2
                       style={{ cursor: "pointer" }}
                       onClick={() => setClickVideo3(!clickVideo3)}
-                      className="suggestions-middle-card__subject"
+                      className="suggestions-middle-card__subject qora__link"
                     >
                       Biznesingizdagi muammolarga echim qidirib charchadingizmi?
                     </h2>

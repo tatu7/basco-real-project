@@ -35,6 +35,72 @@ function Platform() {
           samarali boshqarish va avtomatlashtirish imkoniyatini beradi.
         </p>
         {shower ? (
+          <Fade top>
+            <div className="hide__parag">
+              <p>
+                <p className="platform__left--parag--4">
+                  Bu bilan esa o’sha zahotiyoq biznesingizdagi operatsion va
+                  moliyaviy holatni yaqqol ko’rish imkoniyatiga ega bo’lasiz.
+                  Holatni aniq ko’ra olish esa to’g’ri va tezkor qarorlarni
+                  qabul qilishingizga yordam beradi. <br /> Bu orqali
+                  o’z-o’zidan
+                </p>
+                <p className="platform__left--parag--4">
+                  Moliyaviy holatingizni va samaradorligingizni bir necha
+                  baravarga oshirishingiz mumkin degani. <br /> Yagona tizim
+                  orqali
+                </p>
+                <p className="platform__left--parag--4">
+                  Biznesingizdagi butun boshli mijozlar bilan munosabatlar,
+                  savdo jarayonlari, xodimlar bilan bog’liq barcha ma’lumotlar,
+                  kompaniyaning barcha turdagi hisob-kitoblaridan tortib… <br />
+                </p>
+                <p className="platform__left--parag--4">
+                  Skladdagi tayyor mahsulotlar harakatigacha bo’lgan aniq
+                  ma’lumotlarni nazorat qilishingiz va boshqarishingiz mumkin
+                  bo’ladi. <br /> Ma’lumotlarning aniqligi sabab siz tez va
+                  to’g’ri
+                </p>
+                <p className="platform__left--parag--4">
+                  Qarorlarni qabul qilish imkoniyatiga ega bo’lasiz. <br />
+                </p>
+                <p className="platform__left--parag--4">
+                  Vaqtingizni biznesingizga to’g’ridan-to’g’ri foyda olib
+                  kelmaydigan ishlarga sarflashdan to’xtab… <br />
+                </p>
+                <p className="platform__left--parag--4">
+                  Bank hisob-raqamingizda, haqiqatda, ijobiy o’zgarish qiladigan
+                  va kompaniyangizning bozordagi ulushini oshiradigan muhim
+                  ishlarga diqqat qila boshlaysiz. <br />
+                </p>
+                <p className="platform__left--parag--4">
+                  Xo’sh, qanday qilib ushbu imkoniyatga ega bo’lishingiz mumkin?
+                  <br />
+                </p>
+                <p className="platform__left--parag--4">
+                  Shunchaki, quyidagi havola orqali ma’lumotlaringizni
+                  qoldiring.
+                  <br />
+                </p>
+                <p className="platform__left--parag--4">
+                  “Mutaxassis bilan bog’lanish”
+                </p>
+                {shower ? (
+                  <div className="platform__left--more--button">
+                    <button onClick={() => setShower(!shower)}>
+                      {shower ? "Yopish" : "Davomini o`qish "}
+                    </button>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </p>
+            </div>
+          </Fade>
+        ) : (
+          ""
+        )}
+        {shower ? (
           ""
         ) : (
           <div className="platform__left--more--button">
@@ -59,70 +125,7 @@ function Platform() {
           <img src={play} alt="" />
         </div>
       </div>
-      {shower ? (
-        <Fade top>
-          <div className="hide__parag">
-            <p>
-              <p className="platform__left--parag--4">
-                Bu bilan esa o’sha zahotiyoq biznesingizdagi operatsion va
-                moliyaviy holatni yaqqol ko’rish imkoniyatiga ega bo’lasiz.
-                Holatni aniq ko’ra olish esa to’g’ri va tezkor qarorlarni qabul
-                qilishingizga yordam beradi. <br /> Bu orqali o’z-o’zidan
-              </p>
-              <p className="platform__left--parag--4">
-                Moliyaviy holatingizni va samaradorligingizni bir necha
-                baravarga oshirishingiz mumkin degani. <br /> Yagona tizim
-                orqali
-              </p>
-              <p className="platform__left--parag--4">
-                Biznesingizdagi butun boshli mijozlar bilan munosabatlar, savdo
-                jarayonlari, xodimlar bilan bog’liq barcha ma’lumotlar,
-                kompaniyaning barcha turdagi hisob-kitoblaridan tortib… <br />
-              </p>
-              <p className="platform__left--parag--4">
-                Skladdagi tayyor mahsulotlar harakatigacha bo’lgan aniq
-                ma’lumotlarni nazorat qilishingiz va boshqarishingiz mumkin
-                bo’ladi. <br /> Ma’lumotlarning aniqligi sabab siz tez va
-                to’g’ri
-              </p>
-              <p className="platform__left--parag--4">
-                Qarorlarni qabul qilish imkoniyatiga ega bo’lasiz. <br />
-              </p>
-              <p className="platform__left--parag--4">
-                Vaqtingizni biznesingizga to’g’ridan-to’g’ri foyda olib
-                kelmaydigan ishlarga sarflashdan to’xtab… <br />
-              </p>
-              <p className="platform__left--parag--4">
-                Bank hisob-raqamingizda, haqiqatda, ijobiy o’zgarish qiladigan
-                va kompaniyangizning bozordagi ulushini oshiradigan muhim
-                ishlarga diqqat qila boshlaysiz. <br />
-              </p>
-              <p className="platform__left--parag--4">
-                Xo’sh, qanday qilib ushbu imkoniyatga ega bo’lishingiz mumkin?
-                <br />
-              </p>
-              <p className="platform__left--parag--4">
-                Shunchaki, quyidagi havola orqali ma’lumotlaringizni qoldiring.
-                <br />
-              </p>
-              <p className="platform__left--parag--4">
-                “Mutaxassis bilan bog’lanish”
-              </p>
-              {shower ? (
-                <div className="platform__left--more--button">
-                  <button onClick={() => setShower(!shower)}>
-                    {shower ? "Yopish" : "Davomini o`qish "}
-                  </button>
-                </div>
-              ) : (
-                ""
-              )}
-            </p>
-          </div>
-        </Fade>
-      ) : (
-        ""
-      )}
+
       {showerModal ? (
         <div className="platform__modal">
           <Modal shower={showerModal} setShower={setShowerModal} />

@@ -19,6 +19,11 @@
       @content;
     }
   }
+  @if $breakpoint==uch {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
 }
 .platform {
   height: auto;
@@ -41,7 +46,7 @@
   @include responsive(mobile) {
     display: flex;
     flex-direction: column;
-    width: 332px;
+    width: 100%;
     margin-bottom: 27rem;
   }
   &__left {
@@ -81,7 +86,15 @@
         font-size: 16px;
         text-align: left;
         margin-bottom: 1rem;
-        width: 277px;
+        width: 100%;
+      }
+      @include responsive(uch) {
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        // text-align: left;
+        margin-bottom: 0rem;
+        width: 100%;
       }
     }
     &--parag {
@@ -104,7 +117,7 @@
         }
         @include responsive(mobile) {
           font-size: 11px;
-          width: 277px;
+          width: 90%;
         }
       }
     }
@@ -139,7 +152,6 @@
           width: 79px;
           height: 22px;
           font-size: 0.7rem;
-          margin-left: 4.5rem;
         }
       }
     }
@@ -217,6 +229,13 @@
         right: 125px;
         top: 0;
       }
+      @include responsive(uch) {
+        position: absolute;
+        width: 200px;
+        height: 120px;
+        right: 85px;
+        top: 0;
+      }
     }
     &--img--2 {
       position: absolute;
@@ -246,6 +265,13 @@
         height: 107px;
         top: 120px;
         right: 50px;
+      }
+      @include responsive(uch) {
+        position: absolute;
+        width: 193px;
+        height: 107px;
+        top: 120px;
+        right: 30px;
       }
     }
     &--img--3 {
@@ -324,6 +350,9 @@
         right: 0px;
         left: 0rem;
       }
+      @include responsive(mobile) {
+        display: none;
+      }
     }
     ///////////////////////
     &--img--6 {
@@ -340,12 +369,14 @@
         right: 10px;
       }
       @include responsive(toqqiz) {
+        display: none;
         height: 100px;
         width: 100px;
         top: 140px;
-        right: 20px;
+        right: 200px;
       }
       @include responsive(mobile) {
+        display: inline;
         width: 104px;
         height: 107px;
         top: 30px;
@@ -421,13 +452,34 @@
 }
 .platform__modal {
   margin-left: -12rem;
+  @include responsive(big) {
+    margin-left: 1rem;
+  }
 }
 .hide__parag {
+  p {
+    font-size: 2.4rem;
+    @include responsive(big) {
+      font-size: 1.6rem;
+    }
+    @include responsive(toqqiz) {
+      font-size: 1.4rem;
+    }
+    @include responsive(mobile) {
+      font-size: 1.1rem;
+    }
+  }
   @include responsive(desktop) {
     margin-left: 7rem;
+    font-size: 1.6rem;
   }
+
   @include responsive(toqqiz) {
     width: 90%;
     margin-left: 2rem;
+  }
+  @include responsive(mobile) {
+    width: 90%;
+    margin-left: 0rem;
   }
 }

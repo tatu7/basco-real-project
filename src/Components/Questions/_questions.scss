@@ -31,7 +31,7 @@
   }
 
   @include responsive(mobile) {
-    width: 393px;
+    width: 100%;
     height: auto;
   }
 }
@@ -50,7 +50,7 @@
     width: 90%;
   }
   @include responsive(mobile) {
-    width: 332px;
+    width: 100%;
     padding: 2rem 0;
     margin-bottom: 1.3rem;
   }
@@ -70,10 +70,12 @@
       margin-bottom: 20px;
     }
     @include responsive(mobile) {
+      display: block;
+      margin: 0 auto;
       font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 10px;
+      font-size: 10px;
+      line-height: 18px;
+      margin-bottom: 5px;
     }
   }
 }

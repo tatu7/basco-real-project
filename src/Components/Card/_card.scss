@@ -1,6 +1,6 @@
 @mixin responsive($breakpoint) {
   @if $breakpoint==mobile {
-    @media (max-width: 392px) {
+    @media (max-width: 440px) {
       @content;
     }
   }
@@ -35,7 +35,7 @@
     width: 100%;
   }
   @include responsive(mobile) {
-    width: 393px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
   }
@@ -64,8 +64,8 @@
     height: 180px;
   }
   @include responsive(mobile) {
-    width: 349px;
-    height: 124px;
+    width: 90%;
+    height: 114px;
     margin: 1rem auto;
     border-radius: 1rem;
     background: linear-gradient(
@@ -166,8 +166,8 @@
         margin-top: -0.9rem;
       }
       @include responsive(mobile) {
-        width: 108px;
-        height: 108px;
+        width: 98px;
+        height: 98px;
         margin-top: -1rem;
       }
     }
