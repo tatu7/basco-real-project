@@ -16,6 +16,7 @@ import persons from "../../Assets/images/persons.png";
 import auto from "../../Assets/images/auto.png";
 import maosh from "../../Assets/images/maosh.png";
 import moliya from "../../Assets/images/moliya.png";
+import sss from "../../Assets/images/sss.png";
 import work from "../../Assets/images/work.png";
 import Modal from "react-modal";
 const customStyles = {
@@ -26,23 +27,25 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    width: "600px",
-    height: "400px",
+    width: "90vw",
+    height: "auto",
+    zIndex: "2000",
+    padding: "3rem",
   },
 };
 const bolim1Title = "Rahbar bo’limi";
-const bolim2Title = "";
-const bolim3Title = "";
-const bolim4Title = "";
-const bolim5Title = "";
-const bolim6Title = "";
-const bolim7Title = "";
-const bolim8Title = "";
-const bolim9Title = "";
-const bolim10Title = "";
-const bolim11Title = "";
-const bolim12Title = "";
-const bolim13Title = "";
+const bolim2Title = "CRM boʼlimi";
+const bolim3Title = "Savdo boʼlimi";
+const bolim4Title = "HR boʼlimi";
+const bolim5Title = "Maosh bo’limi";
+const bolim6Title = "Kassa bo’limi";
+const bolim7Title = "Nazorat bo’limi";
+const bolim8Title = "Sklad bo’limi";
+const bolim9Title = "Ta’minot bo’limi";
+const bolim10Title = "Turli shaxslar bo’limi";
+const bolim11Title = "Asosiy vositalar bo’limi";
+const bolim12Title = "Ishlab chiqarish bo’limi";
+const bolim13Title = "Buxgalteriya bo’limi";
 const bolim1Parag =
   "Rahbar uchun barcha imkoniyatlar bir joyda. Rahbar sifatida sizning vaqtingiz tejaladi, samaradorlik oshadi.Undan tashqari rahbar sifatida siz kompaniyangiz balansini to’laqonli ko’ra olasiz.Dasturning har bir bo’limi o’zaro bog’liq holda ishlagani sababli barcha foydalanuvchilar ma’lumotlarni o’z vaqtida kiritib borishlari talab etiladi. Natijada hisobotlar to’g’ri va aniq yuritiladi.Rahbar sifatida har bir bo’limda ishlar qanday ketayotganligini to’liq ko’ra olasiz. Bu esa kompaniyangiz jarayonlarini tahlil qilish va rivojlantirish imkoniyatini beradi.";
 const bolim2Parag = "";
@@ -180,17 +183,18 @@ function Directions() {
                 <div className="directions-middle__card">
                   <div className="directions-middle-card__box directions-middle-card__box--4">
                     <img
-                      src={saveMoney}
+                      src={sss}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    Hisob-kitob boʼlimi
+                    Ta’minot bo’limi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Xodimlarning maoshi va kompaniyaning hisob-kitobi uchun
-                    optimal yondashuv
+                    Taʼminotchining kompaniyaga xom-ashyo va mahsulot yetkazib
+                    beruvchilar haqidagi maʼlumotlarini tez va qulay topish
+                    imkoniyati.
                   </p>
                   <button
                     onClick={() => {
@@ -329,7 +333,7 @@ function Directions() {
               <ul className="directions-middle__list">
                 <li className="directions-middle__item">
                   <div className="directions-middle__card">
-                    <div className="directions-middle-card__box  directions-middle-card__box--4">
+                    <div className="directions-middle-card__box  directions-middle-card__box--4  sariq">
                       <img
                         width={62}
                         height={62}
@@ -1258,6 +1262,7 @@ function Directions() {
           </Splide>
 
           <Modal
+            // className="directions__modal"
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}

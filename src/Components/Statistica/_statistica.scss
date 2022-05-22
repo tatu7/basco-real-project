@@ -71,6 +71,7 @@
   }
   &__left {
     position: relative;
+    margin-left: 3rem;
     @include responsive(mobile) {
       top: 45rem;
     }

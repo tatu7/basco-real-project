@@ -29,6 +29,11 @@
       @content;
     }
   }
+  @if $breakpoint==olti {
+    @media (max-width: 630px) {
+      @content;
+    }
+  }
 }
 
 .directions {
@@ -224,7 +229,7 @@
           }
         }
         &--4 {
-          background-color: #00cc82;
+          background-color: #fbd289;
           img {
             margin-top: -0.1rem;
             @include responsive(mobile) {
@@ -356,7 +361,7 @@
           background-color: #ff6c8f;
         }
         &--4 {
-          background-color: #00cc82;
+          background-color: #fbd289;
         }
         &--5 {
           background-color: #27aaf0;
@@ -683,5 +688,23 @@
     color: #fff;
     border-radius: 5px;
     margin-top: 10px;
+  }
+}
+.sariq {
+  background-color: #00cc82;
+}
+.directions__modal-name {
+  @include responsive(olti) {
+    font-size: 1.5rem;
+  }
+}
+.directions__modal-text {
+  @include responsive(olti) {
+    font-size: 1.2rem;
+  }
+}
+.directions__modal-btn {
+  @include responsive(olti) {
+    width: 5rem;
   }
 }
