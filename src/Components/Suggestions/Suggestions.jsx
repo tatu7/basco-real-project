@@ -208,7 +208,7 @@ const Suggestions = () => {
                     <h2
                       style={{ cursor: "pointer" }}
                       onClick={() => setClickVideo1(!clickVideo1)}
-                      className="suggestions-middle-card__subject  qora__link"
+                      className="suggestions-middle-card__subject book__body qora__link"
                     >
                       "BASCO" kompaniyasi "BIG DATA" bilan xamkorlikda seminar
                       jarayonlari
