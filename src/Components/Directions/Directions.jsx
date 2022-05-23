@@ -181,7 +181,7 @@ function Directions() {
               </li>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box directions-middle-card__box--4">
+                  <div className="directions-middle-card__box directions-middle-card__box--8">
                     <img
                       src={sss}
                       alt="trade"
@@ -354,7 +354,7 @@ function Directions() {
                         openModal();
                         setClicked(9);
                       }}
-                      className="directions-middle-card__btn"
+                      className="directions-middle-card__btn directions-middle-card__btn--9"
                     >
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
@@ -422,7 +422,7 @@ function Directions() {
                         openModal();
                         setClicked(11);
                       }}
-                      className="directions-middle-card__btn"
+                      className="directions-middle-card__btn directions-middle-card__btn--5"
                     >
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
@@ -457,7 +457,7 @@ function Directions() {
                         openModal();
                         setClicked(12);
                       }}
-                      className="directions-middle-card__btn"
+                      className="directions-middle-card__btn directions-middle-card__btn--6"
                     >
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
@@ -491,7 +491,7 @@ function Directions() {
                         openModal();
                         setClicked(13);
                       }}
-                      className="directions-middle-card__btn"
+                      className="directions-middle-card__btn directions-middle-card__btn--3"
                     >
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
@@ -513,7 +513,7 @@ function Directions() {
               {shower ? "Yopish" : " Barcha bo`limlar"}
             </button>
           </div>
-
+          {/* /////////////////////////////////////////////// */}
           <Splide
             className="directions__splide"
             aria-label="My Favorite Images"
@@ -597,19 +597,20 @@ function Directions() {
                 </li>
                 <li className="directions-middle__item">
                   <div className="directions-middle__card">
-                    <div className="directions-middle-card__box directions-middle-card__box--4">
+                    <div className="directions-middle-card__box directions-middle-card__box--1">
                       <img
-                        src={saveMoney}
+                        src={sss}
                         alt="trade"
                         className="directions-middle-card__img"
                       />
                     </div>
                     <h3 className="directions-middle-card__subject">
-                      Hisob-kitob boʼlimi
+                      Ta’minot bo’limi
                     </h3>
                     <p className="directions-middle-card__text">
-                      Xodimlarning maoshi va kompaniyaning hisob-kitobi uchun
-                      optimal yondashuv
+                      Taʼminotchining kompaniyaga xom-ashyo va mahsulot yetkazib
+                      beruvchilar haqidagi maʼlumotlarini tez va qulay topish
+                      imkoniyati.
                     </p>
                     <button className="directions-middle-card__btn directions-middle-card__btn--4">
                       Batafsil{" "}
@@ -742,7 +743,7 @@ function Directions() {
                       Turli shaxslar bilan ishlash samaradorligi sezilarli
                       darajada oshadi.
                     </p>
-                    <button className="directions-middle-card__btn">
+                    <button className="directions-middle-card__btn directions-middle-card__btn--9  ">
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
                         <AiOutlineRight />
@@ -803,7 +804,7 @@ function Directions() {
                       chiqarishda bo’layotgan ortiqcha xarajatlarni ko’ra oladi
                       hamda real ishlab chiqarishni to’g’ri nazorat qila oladi.
                     </p>
-                    <button className="directions-middle-card__btn">
+                    <button className="directions-middle-card__btn directions-middle-card__btn--5">
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
                         <AiOutlineRight />
@@ -832,7 +833,7 @@ function Directions() {
                       xarajatlarni doim nazorat qilib borish imkoniyati paydo
                       boʻladi.
                     </p>
-                    <button className="directions-middle-card__btn">
+                    <button className="directions-middle-card__btn directions-middle-card__btn--6">
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
                         <AiOutlineRight />
@@ -864,7 +865,7 @@ function Directions() {
                       chiqarishda bo’layotgan ortiqcha xarajatlarni ko’ra oladi
                       hamda real ishlab chiqarishni to’g’ri nazorat qila oladi.
                     </p>
-                    <button className="directions-middle-card__btn">
+                    <button className="directions-middle-card__btn directions-middle-card__btn--3">
                       Batafsil{" "}
                       <span className="directions-middle-card__btn-span">
                         <AiOutlineRight />
@@ -875,7 +876,7 @@ function Directions() {
               </div>
             </SplideSlide>
           </Splide>
-
+          {/* ////////////////////////////////////// */}
           <Splide
             className="directions__splides"
             aria-label="My Favorite Images"
@@ -974,7 +975,7 @@ function Directions() {
                     Xodimlarning maoshi va kompaniyaning hisob-kitobi uchun
                     optimal yondashuv
                   </p>
-                  <button className="directions-middle-card__btn directions-middle-card__btn--4">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--9">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -986,19 +987,20 @@ function Directions() {
             <SplideSlide>
               <li className="directions-middle__item">
                 <div className="directions-middle__card">
-                  <div className="directions-middle-card__box directions-middle-card__box--4">
+                  <div className="directions-middle-card__box directions-middle-card__box--8">
                     <img
-                      src={saveMoney}
+                      src={sss}
                       alt="trade"
                       className="directions-middle-card__img"
                     />
                   </div>
                   <h3 className="directions-middle-card__subject">
-                    Hisob-kitob boʼlimi
+                    Ta’minot bo’limi
                   </h3>
                   <p className="directions-middle-card__text">
-                    Xodimlarning maoshi va kompaniyaning hisob-kitobi uchun
-                    optimal yondashuv
+                    Taʼminotchining kompaniyaga xom-ashyo va mahsulot yetkazib
+                    beruvchilar haqidagi maʼlumotlarini tez va qulay topish
+                    imkoniyati.
                   </p>
                   <button className="directions-middle-card__btn directions-middle-card__btn--4">
                     Batafsil{" "}
@@ -1128,7 +1130,7 @@ function Directions() {
                     Turli shaxslar bilan ishlash samaradorligi sezilarli
                     darajada oshadi.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--9">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -1158,7 +1160,7 @@ function Directions() {
                     Barcha asosiy vositalarning hisob-kitoblari, eskirishi hamda
                     ularni sotishdan olinadigan foyda va zararlar yagona joyda.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn ">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -1188,7 +1190,7 @@ function Directions() {
                     bo’layotgan ortiqcha xarajatlarni ko’ra oladi hamda real
                     ishlab chiqarishni to’g’ri nazorat qila oladi.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--5">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -1219,7 +1221,7 @@ function Directions() {
                     xarajatlarni doim nazorat qilib borish imkoniyati paydo
                     boʻladi.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--6">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />
@@ -1250,7 +1252,7 @@ function Directions() {
                     bo’layotgan ortiqcha xarajatlarni ko’ra oladi hamda real
                     ishlab chiqarishni to’g’ri nazorat qila oladi.
                   </p>
-                  <button className="directions-middle-card__btn">
+                  <button className="directions-middle-card__btn directions-middle-card__btn--3">
                     Batafsil{" "}
                     <span className="directions-middle-card__btn-span">
                       <AiOutlineRight />

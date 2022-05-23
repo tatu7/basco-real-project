@@ -61,12 +61,6 @@
     height: auto;
   }
 
-  // background: linear-gradient(
-  //   24.99deg,
-  //   #11172a 8.49%,
-  //   #11172a 91.51%,
-  //   #2f3a5e 91.51%
-  // );
   background-color: #11172a;
   &-top {
     display: flex;
@@ -185,7 +179,7 @@
       }
       @include responsive(yetti) {
         margin-top: 0.6rem;
-        margin-left: 1.5rem;
+        margin-left: 2.5rem;
       }
     }
     &-card {
@@ -397,6 +391,9 @@
         }
         &--8 {
           background-color: #fbd289;
+        }
+        &--9 {
+          background-color: #00cc82;
         }
       }
     }
@@ -638,6 +635,11 @@
   }
 }
 
+@media (max-width: 380px) {
+  .directions-middle-card {
+    height: 228px;
+  }
+}
 @media (max-width: 350px) {
   .directions {
     &__splides {
@@ -729,5 +731,17 @@
 .directions__modal-btn {
   @include responsive(olti) {
     width: 5rem;
+  }
+}
+
+.directions-middle-card__box--4 {
+  background-color: #00cc82;
+}
+.directions-middle__item {
+  @include responsive(olti) {
+    height: 230px;
+  }
+  @include responsive(small) {
+    height: 310px;
   }
 }

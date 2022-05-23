@@ -139,10 +139,11 @@
         }
         @include responsive(mobile) {
           display: block;
-          text-align: center;
+          text-align: left;
           display: block;
           margin: 1rem auto;
           font-size: 13px;
+          width: 72%;
         }
       }
       &__text {
@@ -156,7 +157,7 @@
           font-size: 13px;
         }
         @include responsive(mobile) {
-          width: 85%;
+          width: 72%;
           text-align: left;
           display: block;
           margin: 0 auto;
@@ -241,4 +242,9 @@
 .card__bottom {
   width: 100%;
   padding: 0 3.4rem;
+}
+.card__body {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
 }

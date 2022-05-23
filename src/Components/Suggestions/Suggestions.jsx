@@ -100,7 +100,7 @@ const Suggestions = () => {
                         className="suggestions-middle-card__img"
                       />
                     </div>
-                    <div className="card__bottom">
+                    <div className="card__body">
                       <p className="suggestions-middle-card__subject">
                         Bunga ishonmagan bo’lardingiz
                       </p>
@@ -127,7 +127,7 @@ const Suggestions = () => {
                       />
                     </div>
 
-                    <div className="card__bottom">
+                    <div className="card__body">
                       <p className="suggestions-middle-card__subject">
                         ERP platforformasi haqida
                       </p>
@@ -152,8 +152,8 @@ const Suggestions = () => {
                         className="suggestions-middle-card__img"
                       />
                     </div>
-                    <div className="card__bottom">
-                      <p className="suggestions-middle-card__subject">
+                    <div className="card__body">
+                      <p className="suggestions-middle-card__subject ">
                         BASCO ERP platformasi
                       </p>
                       <NavLink
