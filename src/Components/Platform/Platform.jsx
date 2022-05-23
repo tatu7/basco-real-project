@@ -14,6 +14,17 @@ import Modal from "../../UI/Modal/Modal";
 function Platform() {
   const [shower, setShower] = useState(false);
   const [showerModal, setShowerModal] = useState(false);
+  const url = (
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/94BvSTTEWfk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  );
   return (
     <section className="platform ">
       <div className="platform__left">
@@ -128,7 +139,7 @@ function Platform() {
 
       {showerModal ? (
         <div className="platform__modal">
-          <Modal shower={showerModal} setShower={setShowerModal} />
+          <Modal shower={showerModal} setShower={setShowerModal} url={url} />
         </div>
       ) : (
         ""
