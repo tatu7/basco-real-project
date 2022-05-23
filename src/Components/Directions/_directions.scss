@@ -9,6 +9,11 @@
       @content;
     }
   }
+  @if $breakpoint==yetti {
+    @media (max-width: 770px) {
+      @content;
+    }
+  }
   @if $breakpoint==tablet {
     @media (max-width: 900px) {
       @content;
@@ -162,7 +167,7 @@
       margin-bottom: 5rem;
       @include responsive(desktop) {
         width: 95%;
-        height: 38.1rem;
+        height: 34.1rem;
       }
       @include responsive(mobile) {
         width: 75%;
@@ -178,6 +183,10 @@
       @include responsive(desktop) {
         width: 100%;
       }
+      @include responsive(yetti) {
+        margin-top: 0.6rem;
+        margin-left: 1.5rem;
+      }
     }
     &-card {
       &__box {
@@ -190,7 +199,11 @@
           width: 31px;
           height: 31px;
         }
-
+        img {
+          @include responsive(yetti) {
+            // width: 2rem;
+          }
+        }
         &--1 {
           background-color: #fbd289;
           img {
@@ -299,6 +312,11 @@
           font-size: 16px;
           width: 70%;
         }
+        @include responsive(yetti) {
+          font-size: 14px;
+          line-height: 20px;
+          width: 80%;
+        }
         @include responsive(planshet) {
           font-size: 13px;
         }
@@ -319,6 +337,11 @@
         @include responsive(desktop) {
           font-size: 13px;
           width: 70%;
+        }
+        @include responsive(yetti) {
+          font-size: 13px;
+          line-height: 20px;
+          width: 80%;
         }
         @include responsive(planshet) {
           font-size: 11px;
